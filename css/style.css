@@ -26,6 +26,10 @@ body{
   margin: 0;
   list-style: none;
 }
+.header-main a{
+  text-decoration: none;
+  color: black;
+}
 .navmenu{
 
   width: 60vw;
