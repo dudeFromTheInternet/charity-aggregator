@@ -1,0 +1,41 @@
+.title-container{
+  display: flex;
+  justify-content: center;
+  .title{
+    margin: 2vh 0 2vh 0;
+    background-color: #e88467;
+    border-radius: 20px;
+    padding: 0 30px 0 30px;
+    color: #464646;
+    font-size: 70px;
+    font-weight: normal;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.welcoming-speech{
+  padding: 0 20vw 0 20vw;
+  margin: 20px 0 20px 0;
+  text-align: justify;
+}
+.to-catalogue-container{
+  display: flex;
+  margin-top: 3vh;
+  justify-content: center;
+  .to-catalogue {
+    margin: 0;
+    padding: 10px 20px;
+    h2{
+      padding: 0 30px 5px 30px;
+      margin: 0;
+      background-color: #b3dc75;
+      border-radius: 20px;
+      color: #464646;
+      font-size: 40px;
+      font-weight: normal;
+      text-decoration: none;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+

@@ -1,5 +1,6 @@
 body{
   margin: 5% 0 0;
+  font-family: Verdana;
 }
 .header-main{
   display: flex;
@@ -53,11 +54,16 @@ body{
   align-content: center;
 }
 .header-main a{
+  color: #464646;
   width: 7vw;
   display: flex;
   justify-content: center;
   font-family: Inter, serif;
-  font-size: 18px;
+  font-size: 90%;
+}
+article{
+  color: #464646;
+  font-size: 20px;
 }
 html {
   color: #222;
@@ -66,14 +72,14 @@ html {
 }
 /* Frame 8 */
 .logIn{
-  background-color: #FAA85C;
+  background-color: #e88467;
   border-radius: 20px;
   padding: 8px 15px 8px 15px;
   width: 25%;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .menu {
-  background-color: white;
+  background-color: #b3dc75;
   border-radius: 20px;
   padding: 10px 25px 10px 25px;
   width: 25vw;
@@ -82,7 +88,7 @@ html {
 footer{
   width: 100%;
   height: 30vh;
-  margin: 0;
+  margin: 10vh 0 0 0;
   background-color: #222222;
 }
 /*
@@ -235,8 +241,8 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: 800px) {
+
 }
 
 @media print,
