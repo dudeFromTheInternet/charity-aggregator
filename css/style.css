@@ -62,10 +62,10 @@ a{
 }
 .header-main a{
   color: #464646;
-  width: 7vw;
+  width: 8vw;
   display: flex;
   justify-content: center;
-  font-size: 95%;
+  font-size: 0.9vw;
 }
 article{
   color: #464646;
