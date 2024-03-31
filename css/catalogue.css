@@ -5,7 +5,7 @@
     .sidemenu{
       background-color: #e88467;
       border-radius: 20px;
-      height: 700px;
+
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -20,35 +20,4 @@
   justify-content: space-between;
 }
 
-.dropdown-btn {
-    background-color: #f1f1f1;
-    color: #333;
-    padding: 10px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-  }
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 160px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    z-index: 1;
-  }
-
-  .dropdown-content a {
-    color: #333;
-    padding: 10px;
-    text-decoration: none;
-    display: block;
-  }
-
-  .dropdown-content a:hover {
-    background-color: #f9f9f9;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
 

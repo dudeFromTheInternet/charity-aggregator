@@ -32,19 +32,22 @@
 </header>
 <script src="js/app.js"></script>
 <div class="cat-main">
-  <aside class="sidemenu">
+  <form class="sidemenu">
     <h4>Поиск по фильтрам</h4>
-    <input class="name-filter" placeholder="Название">
-    <input placeholder="Категория">
-    <div class="dropdown">
-      <button class="dropdown-btn">Меню</button>
-      <div class="dropdown-content">
-        <a href="#">Ссылка 1</a>
-        <a href="#">Ссылка 2</a>
-        <a href="#">Ссылка 3</a>
-      </div>
-    </div>
-  </aside>
+    <label>
+      <input class="name-filter" placeholder="Название">
+    </label>
+    <label>
+      <input placeholder="Категория">
+    </label>
+    <label>
+      дропбокс
+      <select class="dropdown">
+        <option></option>
+      </select>
+    </label>
+    <input type="submit" value="Поиск">
+  </form>
   <div class="projects-container">
     тут список проектов
   </div>
