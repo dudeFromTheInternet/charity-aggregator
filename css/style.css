@@ -12,6 +12,10 @@ a{
   background-color: #f0f0f0;
   cursor: pointer;
 }
+.logo-container{
+  display: flex;
+  align-items: center;
+}
 .header-main{
   display: flex;
   flex-direction: row;
@@ -59,6 +63,7 @@ a{
 }
 .header-main li{
   align-content: center;
+  justify-content: center;
 }
 .header-main a{
   color: #464646;
@@ -248,7 +253,49 @@ textarea {
    ========================================================================== */
 
 @media only screen and (max-width: 800px) {
+  body{
+    margin: 0;
+  }
+  .header-main{
+    position: relative;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+   .navmenu, .authmenu{
+     flex-direction: column;
+     justify-content: center;
+     align-content: center;
+     ul{
+       width: 100%;
+       justify-content: center;
 
+     }
+
+   }
+    .logo-container{
+      display: none;
+      justify-content: center;
+      .logo{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        img{
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+    li{
+      display: flex;
+      justify-content: center;
+      a{
+        width: 70vw;
+        font-size: 10px;
+        margin: 3px;
+      }
+    }
+  }
 }
 
 @media print,
