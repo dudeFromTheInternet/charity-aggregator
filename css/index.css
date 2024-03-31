@@ -43,3 +43,11 @@
   }
 }
 
+@media only screen and (max-width: 800px) {
+  .title-container{
+    .title{
+      font-size: 10vw;
+    }
+  }
+}
+

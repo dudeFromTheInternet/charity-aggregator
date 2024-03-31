@@ -67,10 +67,10 @@ a{
 }
 .header-main a{
   color: #464646;
-  width: 8vw;
+  width: 9vw;
   display: flex;
   justify-content: center;
-  font-size: 0.9vw;
+  font-size: 1vw;
 }
 article{
   color: #464646;
@@ -266,6 +266,7 @@ textarea {
      flex-direction: column;
      justify-content: center;
      align-content: center;
+     padding: 0;
      ul{
        width: 100%;
        justify-content: center;
@@ -274,8 +275,9 @@ textarea {
 
    }
     .logo-container{
-      display: none;
+      display: flex;
       justify-content: center;
+      margin-bottom: 15px;
       .logo{
         margin: 0;
         display: flex;
@@ -291,7 +293,7 @@ textarea {
       justify-content: center;
       a{
         width: 70vw;
-        font-size: 10px;
+        font-size: 14px;
         margin: 3px;
       }
     }
