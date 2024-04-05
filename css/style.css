@@ -109,6 +109,7 @@ html {
 }
 
 .auth-input{
+  font-size: 1vw;
   width: 30vw;
   height: 4vh;
   margin:  20px 0 20px 0;
@@ -118,8 +119,9 @@ html {
   border: none;
 }
 .auth-button{
+  font-size: 1vw;
   margin-top: 10px;
-  width: 20vw;
+  width: 15vw;
   height: 5vh;
   background-color: var(--main-color);
   border-radius: 10px;
