@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Д.А.Б.Р.О. - каталог</title>
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/catalogue.css">
+  <link rel="stylesheet" href="../css/register.css">
+  <title>Title</title>
 </head>
 <body>
-
 <header class="header-main">
   <div class="logo-container">
     <a href="http://localhost:63342/charity-aggregator/pages/index.html" class = "logo">
@@ -29,33 +28,21 @@
     </ul>
   </nav>
 </header>
-<script src="../js/app.js"></script>
-<div class="cat-main">
-  <form class="sidemenu">
-    <h4>Поиск по фильтрам</h4>
-    <label>
-      <input class="name-filter" placeholder="Название">
-    </label>
-    <label>
-      <input placeholder="Категория">
-    </label>
-    <label>
-      дропбокс
-      <select class="dropdown">
-        <option>что нибудь</option>
-        <option>еще что-то</option>
-        <option>хз</option>
-      </select>
-    </label>
-    <input type="submit" value="Поиск">
+<div class="register-content">
+  <form class="signUp">
+    <h2>Зарегистрироватся</h2>
+    <input placeholder="Придумайте Логин" class="auth-input" required>
+    <input placeholder="email" class="auth-input" required>
+    <input placeholder="Придумайте пароль" class="auth-input" required>
+    <input placeholder="Повторите пароль" class="auth-input" required>
+    <input placeholder="Название вашей организации" class="auth-input">
+    <input placeholder="Направление" class="auth-input">
+    <button>Зарегистрироватся</button>
   </form>
-  <div class="projects-container">
-    тут список проектов
-  </div>
+  <h5>Есть аккаунт? <a href="login.html">Войдите</a></h5>
 </div>
 <footer>
   footer
 </footer>
 </body>
-
 </html>

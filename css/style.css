@@ -1,15 +1,26 @@
+:root{
+  --main-color: #e88467;
+  --secondary-color: #b3dc75;
+  --font-color:#464646;
+  --background-color:#f0f0f0;
+}
+
 body{
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
   margin: 5% 0 0;
   font-family: Verdana;
+  background-color: #E2EAE9;
 }
 
 a{
   text-decoration: none;
-  color: #464646;
+  color: var(--font-color);
 }
 
 .button:hover {
-  background-color: #f0f0f0;
+  background-color: var(--background-color);
   cursor: pointer;
 }
 .logo-container{
@@ -66,14 +77,14 @@ a{
   justify-content: center;
 }
 .header-main a{
-  color: #464646;
+  color: var(--font-color);
   width: 9vw;
   display: flex;
   justify-content: center;
   font-size: 1vw;
 }
 article{
-  color: #464646;
+  color: var(--font-color);
   font-size: 20px;
 }
 html {
@@ -83,24 +94,35 @@ html {
 }
 /* Frame 8 */
 .logIn{
-  background-color: #e88467;
+  background-color: var(--main-color);
   border-radius: 20px;
   padding: 8px 15px 8px 15px;
   width: 25%;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .menu {
-  background-color: #b3dc75;
+  background-color: var(--secondary-color);
   border-radius: 20px;
   padding: 10px 25px 10px 25px;
   width: 25vw;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+.auth-input{
+  margin:  10px 0 10px 0;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 10px 15px 10px 15px;
+  border: none;
+}
 footer{
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  height: 30vh;
-  margin: 10vh 0 0 0;
-  background-color: #222222;
+  height: 10vh;
+  margin-top: 5vh;
+  background-color: #7D8786;
+  color: white;
 }
 /*
  * Remove text-shadow in selection highlight:
