@@ -1,17 +1,19 @@
 :root{
-  --main-color: #e88467;
-  --secondary-color: #b3dc75;
+  --main-color: hsl(13, 74%, 66%);
+  --secondary-color: hsl(93, 74%, 66%);
   --font-color:#464646;
   --background-color:#f0f0f0;
 }
-
 body{
+  position: relative;
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
   justify-content: normal;
   margin: 5% 0 0;
   font-family: Verdana;
-  background-color: #E2EAE9;
+  background: rgb(157,216,231);
+  background: linear-gradient(173deg, hsl(192, 61%, 76%) 0%, rgba(225,234,233,1) 100%, rgba(34,39,46,1) 100%);
 }
 
 a{
@@ -130,12 +132,11 @@ html {
   border: none;
 }
 footer{
-  display: none;
+  margin-top: 5vh;
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 10vh;
-  margin-top: 5vh;
   background-color: #7D8786;
   color: white;
 }
