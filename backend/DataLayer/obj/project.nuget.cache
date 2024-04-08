@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "PUxgHXXtsCKBfj8EqEYVmbSC4oNXQBb//xRSjVvGs9vRojA5/D9ZudtaK9JfMTgnXviRHJwB3Eouq6Y6UqyuKw==",
+  "dgSpecHash": "Grm/jrVdRk9qHXueNAeIltjF79kdIITmJsejanI4K30BsNWocR9XGfxBGKzmIol3Co7bIu84bQqKzVh5OsP7Hg==",
   "success": true,
   "projectFilePath": "/Users/yellooot/Desktop/charity-aggregator/charity-aggregator/backend/DataLayer/DataLayer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/yellooot/.nuget/packages/microsoft.entityframeworkcore/9.0.0-preview.2.24128.4/microsoft.entityframeworkcore.9.0.0-preview.2.24128.4.nupkg.sha512",
+    "/Users/yellooot/.nuget/packages/microsoft.entityframeworkcore.abstractions/9.0.0-preview.2.24128.4/microsoft.entityframeworkcore.abstractions.9.0.0-preview.2.24128.4.nupkg.sha512",
+    "/Users/yellooot/.nuget/packages/microsoft.entityframeworkcore.analyzers/9.0.0-preview.2.24128.4/microsoft.entityframeworkcore.analyzers.9.0.0-preview.2.24128.4.nupkg.sha512",
+    "/Users/yellooot/.nuget/packages/microsoft.extensions.caching.abstractions/9.0.0-preview.2.24128.5/microsoft.extensions.caching.abstractions.9.0.0-preview.2.24128.5.nupkg.sha512",
+    "/Users/yellooot/.nuget/packages/microsoft.extensions.caching.memory/9.0.0-preview.2.24128.5/microsoft.extensions.caching.memory.9.0.0-preview.2.24128.5.nupkg.sha512",
+    "/Users/yellooot/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.0-preview.2.24128.5/microsoft.extensions.dependencyinjection.9.0.0-preview.2.24128.5.nupkg.sha512",
+    "/Users/yellooot/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.0-preview.2.24128.5/microsoft.extensions.dependencyinjection.abstractions.9.0.0-preview.2.24128.5.nupkg.sha512",
+    "/Users/yellooot/.nuget/packages/microsoft.extensions.logging/9.0.0-preview.2.24128.5/microsoft.extensions.logging.9.0.0-preview.2.24128.5.nupkg.sha512",
+    "/Users/yellooot/.nuget/packages/microsoft.extensions.logging.abstractions/9.0.0-preview.2.24128.5/microsoft.extensions.logging.abstractions.9.0.0-preview.2.24128.5.nupkg.sha512",
+    "/Users/yellooot/.nuget/packages/microsoft.extensions.options/9.0.0-preview.2.24128.5/microsoft.extensions.options.9.0.0-preview.2.24128.5.nupkg.sha512",
+    "/Users/yellooot/.nuget/packages/microsoft.extensions.primitives/9.0.0-preview.2.24128.5/microsoft.extensions.primitives.9.0.0-preview.2.24128.5.nupkg.sha512"
+  ],
   "logs": []
 }
