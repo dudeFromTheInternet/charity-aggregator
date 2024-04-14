@@ -13,8 +13,7 @@ body{
   padding: 0;
   margin: 0;
   font-family: Verdana;
-  background: rgb(157,216,231);
-  background: linear-gradient(173deg, hsl(192, 61%, 76%) 0%, rgba(225,234,233,1) 100%, rgba(34,39,46,1) 100%);
+  background: rgb(218, 218, 218);
 }
 
 a{
@@ -110,14 +109,14 @@ html {
 .logIn{
   background-color: var(--main-color);
   border-radius: 10px;
-  padding: 8px 15px 8px 15px;
+  padding: 8px 10px 8px 10px;
   width: 25%;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .menu {
   background-color: var(--secondary-color);
   border-radius: 10px;
-  padding: 10px 10px 10px 10px;
+  padding: 8px 10px 8px 10px;
   width: 15vw;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
