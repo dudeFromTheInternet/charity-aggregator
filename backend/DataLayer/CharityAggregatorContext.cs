@@ -16,12 +16,42 @@ public class CharityAggregatorContext : DbContext
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        modelBuilder.Entity<Charity>()
+            .HasMany(c => c.CharityPhotos)
+            .WithOne(p => p.Charity)
+            .HasForeignKey(p => p.CharityId);
+        
+        modelBuilder.Entity<Charity>()
+            .HasMany(c => c.CharityProjects)
+            .WithOne(p => p.Charity)
+            .HasForeignKey(p => p.CharityId);
+        
+        modelBuilder.Entity<CharityProject>()
+            .HasMany(p => p.ProjectPhotos)
+            .WithOne(ph => ph.CharityProject)
+            .HasForeignKey(ph => ph.ProjectId);
+        
+        modelBuilder.Entity<CharityProject>()
+            .HasMany(p => p.ProjectComments)
+            .WithOne(c => c.CharityProject)
+            .HasForeignKey(c => c.ProjectId);
+        
+        modelBuilder.Entity<ProjectCategoryMapping>()
+            .HasKey(pc => new { pc.ProjectId, pc.CategoryId });
+
+        modelBuilder.Entity<ProjectCategoryMapping>()
+            .HasOne(pc => pc.CharityProject)
+            .WithMany(p => p.ProjectCategoryMappings)
+            .HasForeignKey(pc => pc.ProjectId);
+
+        modelBuilder.Entity<ProjectCategoryMapping>()
+            .HasOne(pc => pc.ProjectCategory)
+            .WithMany(c => c.ProjectCategoryMappings)
+            .HasForeignKey(pc => pc.CategoryId);
     }
     
     public CharityAggregatorContext(DbContextOptions<CharityAggregatorContext> options)
         : base(options)
     {
-        
     }
 }
