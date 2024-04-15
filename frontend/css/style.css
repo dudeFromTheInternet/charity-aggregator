@@ -16,7 +16,6 @@ body{
   background: white;
   background-size: cover;
 }
-
 a{
   text-decoration: none;
   color: var(--font-color);
@@ -46,6 +45,7 @@ a{
 
 }
 .header-main-dynamic {
+  display: none;
   background: rgba(237, 237, 237, 0.75);
   position: fixed;
   top: -100px;
@@ -54,7 +54,7 @@ a{
 }
 
 .header-main-dynamic.active {
-
+  display: flex;
   top: 0;
 }
 .wave {
@@ -146,6 +146,7 @@ html {
 }
 
 .auth-input{
+  border: lightgray solid 1px;
   font-size: 1vw;
   width: 30vw;
   height: 4vh;
@@ -153,7 +154,11 @@ html {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   padding: 10px 15px 10px 15px;
-  border: none;
+}
+.auth-input:focus{
+  outline: none;
+  border: lightskyblue solid 1px;
+  box-shadow: 0 4px 4px hsla(209, 89%, 77%, 0.7);
 }
 .auth-button{
   font-size: 1vw;
