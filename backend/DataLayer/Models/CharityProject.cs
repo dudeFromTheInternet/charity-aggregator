@@ -25,7 +25,7 @@ public class CharityProject
     public int CharityId { get; set; }
     public Charity Charity { get; set; }
 
-    public List<ProjectPhoto> ProjectPhotos { get; set; }
-    public List<ProjectComment> ProjectComments { get; set; }
-    public List<ProjectCategoryMapping> ProjectCategoryMappings { get; set; }
+    public IReadOnlyList<ProjectPhoto> ProjectPhotos { get; set; }
+    public IReadOnlyList<ProjectComment> ProjectComments { get; set; }
+    public IReadOnlyList<ProjectCategoryMapping> ProjectCategoryMappings { get; set; }
 }

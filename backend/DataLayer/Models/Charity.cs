@@ -27,6 +27,6 @@ public class Charity
     [StringLength(100)]
     public string PasswordHash { get; set; }
 
-    public List<CharityPhoto> CharityPhotos { get; set; }
-    public List<CharityProject> CharityProjects { get; set; }
+    public IReadOnlyList<CharityPhoto> CharityPhotos { get; set; }
+    public IReadOnlyList<CharityProject> CharityProjects { get; set; }
 }

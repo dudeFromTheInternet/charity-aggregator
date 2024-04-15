@@ -22,5 +22,6 @@ public class CharityAggregatorContext : DbContext
     public CharityAggregatorContext(DbContextOptions<CharityAggregatorContext> options)
         : base(options)
     {
+        
     }
 }

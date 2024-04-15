@@ -13,5 +13,5 @@ public class ProjectCategory
     [StringLength(100)]
     public string Name { get; set; }
 
-    public List<ProjectCategoryMapping> ProjectCategoryMappings { get; set; }
+    public IReadOnlyList<ProjectCategoryMapping> ProjectCategoryMappings { get; set; }
 }
