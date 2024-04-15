@@ -120,14 +120,14 @@ html {
 
 .logIn{
   background-color: var(--main-color);
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 8px 10px 8px 10px;
   width: 25%;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .menu {
   background-color: var(--secondary-color);
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 8px 10px 8px 10px;
   width: 15vw;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
