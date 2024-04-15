@@ -8,7 +8,7 @@ public class CharityConfiguration : IEntityTypeConfiguration<Charity>
 {
     public void Configure(EntityTypeBuilder<Charity> builder)
     {
-        builder.HasIndex(c => c.UserName)
+        builder.HasIndex(c => c.Username)
             .IsUnique();
     }
 }
