@@ -6,9 +6,10 @@
     background-color: var(--main-color);
     border-radius: 20px;
     padding: 0 30px 0 30px;
-    color: var(--font-color);
+    color: white;
+    font-family: "JetBrains Mono ExtraBold";
     font-size: 70px;
-    font-weight: normal;
+    font-weight: bold;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
 }

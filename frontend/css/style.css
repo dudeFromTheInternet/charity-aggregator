@@ -1,6 +1,6 @@
 :root{
-  --main-color: hsl(13, 74%, 66%);
-  --secondary-color: hsl(93, 74%, 66%);
+  --main-color: hsl(209, 89%, 77%);
+  --secondary-color: hsl(25, 61%, 89%);
   --font-color:#464646;
   --background-color:#f0f0f0;
 }
@@ -13,7 +13,8 @@ body{
   padding: 0;
   margin: 0;
   font-family: Verdana;
-  background: rgb(218, 218, 218);
+  background: url("../img/background.png") center center;
+  background-size: cover;
 }
 
 a{
@@ -34,9 +35,9 @@ a{
   flex-direction: row;
   justify-content: space-around;
   align-content: center;
-
+  margin-bottom: 3vh;
   width: 100%;
-  height: 90px;
+  height: 10vh;
   left: 0;
   top: 0;
   background: rgba(237, 237, 237, 0.75);
@@ -45,6 +46,7 @@ a{
 
 }
 .header-main-dynamic {
+
   position: fixed;
   top: -100px;
   transition: top 0.3s;
@@ -55,7 +57,9 @@ a{
 
   top: 0;
 }
-
+#wave {
+  display: none;
+}
 .header-main ul{
   display: flex;
   flex-direction: row;
@@ -75,8 +79,16 @@ a{
   height: 100%;
 }
 .logo{
+  display: flex;
+  align-items: center;
   height: 70%;
   width: 10%;
+  padding-left: 10px;
+}
+.logo-title{
+  color: black;
+  font-family: "JetBrains Mono ExtraBold";
+  letter-spacing: -0.15em;
 }
 .navbar {
   display: flex;
@@ -308,8 +320,8 @@ textarea {
   }
   .header-main{
     position: relative;
-    height: 40vh;
     display: flex;
+    height: auto;
     flex-direction: column;
     align-content: center;
    .navmenu, .authmenu{
