@@ -1,4 +1,4 @@
-const data = [
+const mockData = [
     {
         name: "Проект 1",
         category: "Категория 1",
@@ -15,42 +15,79 @@ const data = [
     }
 ];
 
-const projectsContainer = document.querySelector('.projects-container');
 
-data.forEach(project => {
-    const projectLink = document.createElement('a');
-    projectLink.className = 'project';
-    projectLink.href = project.projectUrl;
-
-    const projectInfo = document.createElement('div');
-    projectInfo.className = 'project-info';
-
-    const projectName = document.createElement('h2');
-    projectName.className = 'project-name';
-    projectName.textContent = project.name;
-
-    const projectCategory = document.createElement('h5');
-    projectCategory.className = 'project-category';
-    projectCategory.textContent = project.category;
-
-    const projectDescription = document.createElement('p');
-    projectDescription.className = 'project-description';
-    projectDescription.textContent = project.description;
-
-    const projectPhoto = document.createElement('img');
-    projectPhoto.className = 'project-photo';
-    projectPhoto.src = project.photoUrl;
-    projectPhoto.alt = 'project photo';
-
-    projectInfo.appendChild(projectName);
-    projectInfo.appendChild(projectCategory);
-    projectInfo.appendChild(projectDescription);
-    projectLink.appendChild(projectInfo);
-    projectLink.appendChild(projectPhoto);
-
-    projectsContainer.appendChild(projectLink);
+document.addEventListener('DOMContentLoaded', function() {
+    updateProjectsDisplay(mockData);
+    /*
+    fetch('your-backend-url', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+        })
+    })
+        .then(response => response.json())
+        .then(data => updateProjectsDisplay(data))
+        .catch(error => console.error('Error:', error));
+     */
+    });
+document.getElementById('submitButton').addEventListener('click', function() {
+    const nameFilter = document.querySelector('.name-filter').value;
+    const categoryFilter = document.querySelector('.dropdown').value;
+    fetch('your-backend-url', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            name: nameFilter,
+            category: categoryFilter
+        })
+    })
+        .then(response => response.json())
+        .then(data => updateProjectsDisplay(data, true))
+        .catch(error => console.error('Error:', error));
 });
 
-function submit() {
-    console.log('submit');
+function updateProjectsDisplay(projects, clear) {
+    const projectsContainer = document.querySelector('.projects-container');
+    if (clear){
+        while (projectsContainer.firstChild) {
+            projectsContainer.removeChild(projectsContainer.firstChild);
+        }
+    }
+    projects.forEach(project => {
+        const projectLink = document.createElement('a');
+        projectLink.className = 'project';
+        projectLink.href = project.projectUrl;
+
+        const projectInfo = document.createElement('div');
+        projectInfo.className = 'project-info';
+
+        const projectName = document.createElement('h2');
+        projectName.className = 'project-name';
+        projectName.textContent = project.name;
+
+        const projectCategory = document.createElement('h5');
+        projectCategory.className = 'project-category';
+        projectCategory.textContent = project.category;
+
+        const projectDescription = document.createElement('p');
+        projectDescription.className = 'project-description';
+        projectDescription.textContent = project.description;
+
+        const projectPhoto = document.createElement('img');
+        projectPhoto.className = 'project-photo';
+        projectPhoto.src = project.photoUrl;
+        projectPhoto.alt = 'project photo';
+
+        projectInfo.appendChild(projectName);
+        projectInfo.appendChild(projectCategory);
+        projectInfo.appendChild(projectDescription);
+        projectLink.appendChild(projectInfo);
+        projectLink.appendChild(projectPhoto);
+
+        projectsContainer.appendChild(projectLink);
+    });
 }
