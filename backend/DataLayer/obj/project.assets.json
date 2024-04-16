@@ -538,19 +538,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/yellooot/.nuget/packages/": {}
+    "C:\\Users\\cooluser\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/yellooot/Desktop/charity-aggregator/charity-aggregator/backend/DataLayer/DataLayer.csproj",
+      "projectUniqueName": "C:\\Users\\cooluser\\js projects\\charity-aggregator\\backend\\DataLayer\\DataLayer.csproj",
       "projectName": "DataLayer",
-      "projectPath": "/Users/yellooot/Desktop/charity-aggregator/charity-aggregator/backend/DataLayer/DataLayer.csproj",
-      "packagesPath": "/Users/yellooot/.nuget/packages/",
-      "outputPath": "/Users/yellooot/Desktop/charity-aggregator/charity-aggregator/backend/DataLayer/obj/",
+      "projectPath": "C:\\Users\\cooluser\\js projects\\charity-aggregator\\backend\\DataLayer\\DataLayer.csproj",
+      "packagesPath": "C:\\Users\\cooluser\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cooluser\\js projects\\charity-aggregator\\backend\\DataLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/yellooot/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\cooluser\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -595,7 +595,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.2.23502.2/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
