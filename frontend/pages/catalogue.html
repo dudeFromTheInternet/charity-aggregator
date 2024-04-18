@@ -59,23 +59,23 @@
   <form class="sidemenu">
     <h4>Поиск по фильтрам</h4>
     <label>
-      <input class="filter-input" name="name" placeholder="Название проекта">
+      <input class="filter-input" id="name-filter" name="name" placeholder="Название проекта">
     </label>
     <label>
-      <input class="filter-input" name="charity-name" placeholder="Название организатора">
+      <input class="filter-input" id="charity-filter" name="charity-name" placeholder="Название организатора">
     </label>
     <label>
-      <input class="filter-input" name="category" placeholder="Категория">
+      <input class="filter-input" id="category-filter" name="category" placeholder="Категория">
     </label>
     <label>
       дата старта компании
-      <input class="filter-date" type="date" name="name">
+      <input class="filter-date" id="start-date" type="date" name="name">
     </label>
     <label>
       дата конца компании
-      <input class="filter-date" type="date" name="name">
+      <input class="filter-date" id="end-date" type="date" name="name">
     </label>
-    <input class="filter-button" type="submit" value="Поиск">
+    <input class="filter-button" id="submit-button" type="submit" value="Поиск">
   </form>
   <div class="projects-container">
     <a class="project">
@@ -85,6 +85,9 @@
           </h2>
           <h5 class="project-category">
             Категория проекта
+          </h5>
+          <h5>
+            дата начала - дата конца
           </h5>
           <p class="project-description">
             Описание проекта dadawdwafaewvewgvrwgwvceqfwevev

@@ -4,14 +4,18 @@ const mockData = [
         category: "Категория 1",
         description: "Описание проекта 1",
         photoUrl: "../img/project1.png",
-        projectUrl: "project1.html"
+        projectUrl: "project1.html",
+        startDate: "2024-03-01",
+        endDate: "2024-06-01",
     },
     {
         name: "Проект 2",
         category: "Категория 2",
         description: "Описание проекта 2",
         photoUrl: "../img/project2.png",
-        projectUrl: "project2.html"
+        projectUrl: "project2.html",
+        startDate: "01.03.2024",
+        endDate: "01.04.2024",
     }
 ];
 
@@ -32,17 +36,23 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => console.error('Error:', error));
      */
     });
-document.getElementById('submitButton').addEventListener('click', function() {
-    const nameFilter = document.querySelector('.name-filter').value;
-    const categoryFilter = document.querySelector('.dropdown').value;
+document.getElementById('submit-button').addEventListener('click', function() {
+    const name = document.querySelector('#name-filter').value;
+    const startDate = document.querySelector('#start-date').value;
+    const category = document.querySelector('#category-filter').value;
+    const endDate = document.querySelector('#end-date').value;
+    const charityName = document.querySelector('#charity-filter').value;
     fetch('your-backend-url', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            name: nameFilter,
-            category: categoryFilter
+            name: name,
+            startDate: startDate,
+            endDate: endDate,
+            category: category,
+            charityName: charityName
         })
     })
         .then(response => response.json())
@@ -58,6 +68,8 @@ function updateProjectsDisplay(projects, clear) {
         }
     }
     projects.forEach(project => {
+        const startDate = new Date(project.startDate).toLocaleDateString();
+        const endDate = new Date(project.endDate).toLocaleDateString();
         const projectLink = document.createElement('a');
         projectLink.className = 'project';
         projectLink.href = project.projectUrl;
@@ -72,6 +84,8 @@ function updateProjectsDisplay(projects, clear) {
         const projectCategory = document.createElement('h5');
         projectCategory.className = 'project-category';
         projectCategory.textContent = project.category;
+        const projectTime = document.createElement('h5');
+        projectTime.textContent = `${startDate} - ${endDate}`;
 
         const projectDescription = document.createElement('p');
         projectDescription.className = 'project-description';
@@ -84,6 +98,7 @@ function updateProjectsDisplay(projects, clear) {
 
         projectInfo.appendChild(projectName);
         projectInfo.appendChild(projectCategory);
+        projectInfo.appendChild(projectTime);
         projectInfo.appendChild(projectDescription);
         projectLink.appendChild(projectInfo);
         projectLink.appendChild(projectPhoto);
