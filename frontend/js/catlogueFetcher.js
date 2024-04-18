@@ -58,6 +58,13 @@ document.getElementById('submit-button').addEventListener('click', function() {
         .then(response => response.json())
         .then(data => updateProjectsDisplay(data, true))
         .catch(error => console.error('Error:', error));
+    alert(JSON.stringify({
+        name: name,
+        startDate: startDate,
+        endDate: endDate,
+        category: category,
+        charityName: charityName
+    }));
 });
 
 function updateProjectsDisplay(projects, clear) {
