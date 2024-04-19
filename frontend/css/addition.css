@@ -25,6 +25,11 @@
             justify-content: flex-start;
             gap: 10%;
             height: auto;
+            .date-con{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
             .date-container{
                 display: flex;
                 flex-direction: column;
@@ -48,7 +53,7 @@
                 width: 80%;
                 height: 4vh;
                 border-radius: 5px;
-                padding: 1vh 0 1vh 1%;
+                padding: 1vh 0 1vh 0;
                 border: none;
                 font-family: "JetBrains Mono";
                 font-size: 100%;
