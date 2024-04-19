@@ -1,29 +1,90 @@
 .addition-content{
+    font-family: "JetBrains Mono";
     display: flex;
     justify-content: center;
     align-items: center;
     .addition-form{
+        background-color: var(--secondary-color);
         width: 70%;
         border-radius: 10px;
         padding: 2%;
+        h1{
+            margin-top: 0;
+        }
+        textarea{
+            border: none;
+            border-radius: 10px;
+            padding: 1%;
+            width: 80%;
+            justify-self: center;
+        }
         .addition-main-info{
+            margin-left: 8%;
             display: flex;
             flex-direction: column;
+            justify-content: flex-start;
+            gap: 10%;
+            height: auto;
+            .date-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 10%;
+                width: 80%;
+                height: 20%;
+                span{
+                    font-family: "JetBrains Mono";
+                    font-size: 110%;
+                    width: 100%;
+                }
+            }
+            .addition-date{
+                width: 40%;
+                border: none;
+                border-radius: 3px;
+                padding: 1vh 0 1vh 1%;
+            }
+            .addition-input{
+                width: 80%;
+                height: 4vh;
+                border-radius: 5px;
+                padding: 1vh 0 1vh 1%;
+                border: none;
+                font-family: "JetBrains Mono";
+                font-size: 100%;
+            }
         }
         .addition-photo{
             display: flex;
             flex-direction: column;
             align-items: flex-end;
             justify-content: center;
+            margin-right: 8%;
             .preview{
                 width: 50%;
                 border-radius: 10px;
                 aspect-ratio: 1/1;
-                border: 1px solid gray;
+                background-color: #9e9088;
+                margin-bottom: 5%;
             }
             #addition-image{
                 width: 50%;
+                border-radius: 5px;
+                border: none;
             }
+        }
+        #submit-addition{
+            background-color: var(--main-color);
+            border: none;
+            border-radius: 5px;
+            padding: 1%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20%;
+            font-family: "JetBrains Mono";
+            font-size: 80%;
+            cursor: pointer;
         }
     }
 }

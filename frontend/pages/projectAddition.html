@@ -59,17 +59,14 @@
     <form class="addition-form">
         <h1>Добавьте свой проект</h1>
         <main class="addition-main-info">
-
-            <label>
                 <input id="addition-name" class="addition-input" placeholder="Название проекта">
-            </label>
-            <span>Дата действия проекта:</span>
-            <span>
-        <label>С <input id="addition-start-date" type="date" class="addition-input"> По <input id="addition-end-date" type="date" class="addition-input"></label>
-      </span>
-            <label>
-                <input name="category" id="addition-category" class="addition-input" placeholder="категория проекта">
-            </label>
+            <div class="date-container">
+                <span>Дата действия проекта:</span>
+                <span>
+                    <label>С <input id="addition-start-date" type="date" class="addition-date"> По <input id="addition-end-date" type="date" class="addition-date"></label>
+                </span>
+            </div>
+                <input name="category" id="addition-category" class="addition-input" placeholder="Категория проекта">
         </main>
         <aside class="addition-photo">
             <img id="preview" src="#" class="preview" alt="Логотип или фото проекта">
