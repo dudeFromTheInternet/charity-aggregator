@@ -19,7 +19,6 @@
             justify-self: center;
         }
         .addition-main-info{
-            margin-left: 8%;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
