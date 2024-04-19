@@ -3,6 +3,7 @@ const mockData = [
         name: "Проект 1",
         category: "Категория 1",
         description: "Описание проекта 1",
+        charityName: "Организация 1",
         photoUrl: "../img/project1.png",
         projectUrl: "project1.html",
         startDate: "2024-03-01",
@@ -12,6 +13,7 @@ const mockData = [
         name: "Проект 2",
         category: "Категория 2",
         description: "Описание проекта 2",
+        charityName: "Организация 2",
         photoUrl: "../img/project2.png",
         projectUrl: "project2.html",
         startDate: "01.03.2024",
@@ -91,6 +93,8 @@ function updateProjectsDisplay(projects, clear) {
         const projectCategory = document.createElement('h5');
         projectCategory.className = 'project-category';
         projectCategory.textContent = project.category;
+        const charityName = document.createElement('h5');
+        charityName.textContent = project.charityName;
         const projectTime = document.createElement('h5');
         projectTime.textContent = `${startDate} - ${endDate}`;
 
@@ -105,6 +109,7 @@ function updateProjectsDisplay(projects, clear) {
 
         projectInfo.appendChild(projectName);
         projectInfo.appendChild(projectCategory);
+        projectInfo.appendChild(charityName);
         projectInfo.appendChild(projectTime);
         projectInfo.appendChild(projectDescription);
         projectLink.appendChild(projectInfo);
