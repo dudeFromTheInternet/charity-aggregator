@@ -13,6 +13,5 @@ public class CharityPhoto
     public int CharityId { get; set; }
     public string PhotoUrl { get; set; }
     public string Description { get; set; }
-
     public Charity Charity { get; set; }
 }

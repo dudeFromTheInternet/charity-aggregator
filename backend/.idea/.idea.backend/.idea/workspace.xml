@@ -4,15 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8897a72-a2ce-44c2-8d93-0e9633ea9024" name="Changes" comment="fix to IReadOnlyList">
-      <change afterPath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/ICharityPhotoRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/ICharityProjectRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/ICharityRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/IProjectCategoryMappingRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/IProjectCategoryRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/IProjectCommentRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/IProjectPhotoRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataLayer/DataLayer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/DataLayer.csproj" afterDir="false" />
+    <list default="true" id="a8897a72-a2ce-44c2-8d93-0e9633ea9024" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/CharityAggregatorContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/CharityAggregatorContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Models/CharityPhoto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/Models/CharityPhoto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/ICharityPhotoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/ICharityPhotoRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/ICharityProjectRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/ICharityProjectRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/ICharityRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/ICharityRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/IProjectCategoryMappingRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/IProjectCategoryMappingRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/IProjectCategoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/IProjectCategoryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/IProjectCommentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/IProjectCommentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/IProjectPhotoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/Repositories/Abstract/IProjectPhotoRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Repositories/Implementations/CharityPhotoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/Repositories/Implementations/CharityPhotoRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Repositories/Implementations/CharityProjectRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/Repositories/Implementations/CharityProjectRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Repositories/Implementations/CharityRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/Repositories/Implementations/CharityRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Repositories/Implementations/ProjectCategoryMappingRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/Repositories/Implementations/ProjectCategoryMappingRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Repositories/Implementations/ProjectCategoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/Repositories/Implementations/ProjectCategoryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Repositories/Implementations/ProjectCommentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/Repositories/Implementations/ProjectCommentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Repositories/Implementations/ProjectPhotoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/Repositories/Implementations/ProjectPhotoRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/obj/Debug/net8.0/DataLayer.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/obj/Debug/net8.0/DataLayer.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/obj/Debug/net8.0/DataLayer.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/obj/Debug/net8.0/DataLayer.AssemblyInfoInputs.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +34,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/yellooot/Desktop/charity-aggregator/charity-aggregator/backend/DataLayer/Models/Charity.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7aa4078c70e7498da29c22a5cff9ab6027bdb0/67/b612a49e/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7aa4078c70e7498da29c22a5cff9ab6027bdb0/f1/a6786853/DbContextOptions`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -35,23 +46,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\cooluser\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\cooluser\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\cooluser\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/yellooot/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/yellooot/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache&quot;,
+      &quot;/Users/yellooot/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -61,6 +74,8 @@
       <option name="presentableId" value="Default" />
       <updated>1712587483412</updated>
       <workItem from="1712587484948" duration="202000" />
+      <workItem from="1713775064216" duration="1533000" />
+      <workItem from="1713776675590" duration="5635000" />
     </task>
     <task id="LOCAL-00001" summary="delete configurations">
       <option name="closed" value="true" />
@@ -78,7 +93,31 @@
       <option name="project" value="LOCAL" />
       <updated>1713189724233</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add repository interface files">
+      <option name="closed" value="true" />
+      <created>1713189971483</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713189971483</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add repo implementation files">
+      <option name="closed" value="true" />
+      <created>1713190129583</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713190129583</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add model relations">
+      <option name="closed" value="true" />
+      <created>1713190740338</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713190740338</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -89,6 +128,9 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="delete configurations" />
     <MESSAGE value="fix to IReadOnlyList" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix to IReadOnlyList" />
+    <MESSAGE value="Add repository interface files" />
+    <MESSAGE value="Add repo implementation files" />
+    <MESSAGE value="Add model relations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add model relations" />
   </component>
 </project>

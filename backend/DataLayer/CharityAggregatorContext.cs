@@ -16,6 +16,8 @@ public class CharityAggregatorContext : DbContext
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Charity>().HasIndex(c => c.Username).IsUnique();
+        
         modelBuilder.Entity<Charity>()
             .HasMany(c => c.CharityPhotos)
             .WithOne(p => p.Charity)
