@@ -9,15 +9,90 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      margin: 20px;
+
+      margin: 20px 40px 20px 20px;
       padding: 10px;
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      min-height: 600px;
+        max-width: 15vw;
+        h4{
+            text-align: center;
+        }
+        .filter-input{
+            border: none;
+            outline: none;
+            border-radius: 3px;
+            margin: 10px;
+            height: 4vh;
+            width: 90%;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+        }
+        .filter-date{
+            border: none;
+            outline: none;
+            border-radius: 2px;
+            margin: 10px;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+        }
+        .filter-button{
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 5px;
+            background-color: var(--secondary-color);
+            align-self: center;
+            width: 50%;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+        }
   }
 }
 .projects-container{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+    margin-top: 20px;
+    .project{
+        background-color: var(--secondary-color);
+        border-radius: 10px;
+        margin-bottom: 20px;
+        padding: 10px;
+        width: 95%;
+        height: 200px;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        .project-info{
+            display: flex;
+            width: 60%;
+            flex-direction: column;
+            .project-description{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                height: 75%;
+            }
+        }
+        .project-name{
+            height: 15%;
+            margin: 0;
+        }
+        h5{
+            height: 8%;
+            margin: 0;
+            margin-top: 1%;
+        }
+        .project-photo{
+            margin: 1%;
+            max-height: 80%;
+            aspect-ratio: 1/1;
+            align-self: center;
+        }
+    }
+}
+footer{
+    position: static;
 }
 
 

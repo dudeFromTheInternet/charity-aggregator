@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/addition.css">
+    <link rel="icon" href="../img/logo.png" sizes="any">
+    <script src="../js/app.js"></script>
+    <title>Д.А.Б.Р.О. - Добавить проект</title>
+</head>
+<body>
+<img class="wave" src="../img/background-elem.png">
+<img class="wave-right" src="../img/background-elem.png">
+<header class="header-main">
+    <div class="logo-container">
+        <a href="index.html" class = "logo">
+            <h1 class="logo-title">Д.А.Б.Р.О</h1>
+        </a>
+    </div>
+    <nav class="navbar">
+        <ul class="navmenu">
+            <li><a href="catalogue.html" class="menu button">Каталог</a></li>
+            <li><a class="menu button">Статистика</a></li>
+            <li><a class="menu button">Добавить проект</a></li>
+            <li><a class="menu button">Статьи</a></li>
+            <li><a class="menu button">Добавить статью</a></li>
+        </ul>
+    </nav>
+    <nav class="navbar">
+        <ul class="authmenu">
+            <li><a href="login.html" class="auth logIn button">Войти</a></li>
+            <li><a href="register.html" class="auth">Регистрация</a></li>
+        </ul>
+    </nav>
+</header>
+<header class="header-main header-main-dynamic">
+    <div class="logo-container">
+        <a href="index.html" class = "logo">
+            <h1 class="logo-title">Д.А.Б.Р.О</h1>
+        </a>
+    </div>
+    <nav class="navbar">
+        <ul class="navmenu">
+            <li><a href="catalogue.html" class="menu button">Каталог</a></li>
+            <li><a class="menu button">Статистика</a></li>
+            <li><a class="menu button">Добавить проект</a></li>
+            <li><a class="menu button">Статьи</a></li>
+            <li><a class="menu button">Добавить статью</a></li>
+        </ul>
+    </nav>
+    <nav class="navbar">
+        <ul class="authmenu">
+            <li><a href="login.html" class="auth logIn button">Войти</a></li>
+            <li><a href="register.html" class="auth">Регистрация</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="addition-content">
+    <form class="addition-form">
+        <h1>Добавьте свой проект</h1>
+        <main class="addition-main-info">
+                <input id="addition-name" class="addition-input" placeholder="Название проекта">
+            <div class="date-container">
+                <span>Дата действия проекта:</span>
+                <span class="date-con">
+                    С <input id="addition-start-date" type="date" class="addition-date"> По <input id="addition-end-date" type="date" class="addition-date">
+                </span>
+            </div>
+                <input name="category" id="addition-category" class="addition-input" placeholder="Категория проекта">
+        </main>
+        <aside class="addition-photo">
+            <img id="preview" src="#" class="preview" alt="Логотип или фото проекта">
+            <input accept="image/*" type='file' id="addition-image">
+        </aside>
+            <textarea id="addition-text" placeholder="Опишите о чем ваш проект"></textarea>
+        <input type="submit" id="submit-addition">
+    </form>
+    <script  src="../js/addition.js"></script>
+</div>
+</body>
+</html>
