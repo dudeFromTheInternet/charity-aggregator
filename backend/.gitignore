@@ -444,6 +444,7 @@ FodyWeavers.xsd
 # CMake
 cmake-build-*/
 
+.DS_Store
 # Mongo Explorer plugin
 .idea/**/mongoSettings.xml
 
