@@ -1,0 +1,28 @@
+.article-title {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.article-flex {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  align-self: center;
+  margin-top: 20px;
+}
+
+
+article {
+  width: 90vw;
+  img {
+    float: right;
+    top:0;
+    right:0;
+    margin: 7px 7px 7px 0;
+    width: 30%;
+    aspect-ratio: 1/1;
+  }
+}
+
+
