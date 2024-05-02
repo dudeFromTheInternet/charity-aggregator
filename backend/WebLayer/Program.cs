@@ -78,7 +78,7 @@ using (var scope = app.Services.CreateScope())
         {
             CharityProject = project,
             Description = "Photo 1",
-            PhotoUrl = "https://example.com/photo.jpg"
+            PhotoBytes = "https://example.com/photo.jpg"
         });
         
         await context.SaveChangesAsync();
@@ -101,7 +101,7 @@ app.MapGet("/CharityProjects/", async (CharityAggregatorContext context) =>
         Category = p.ProjectCategoryMappings.Select(pc => pc.ProjectCategory.Name),
         p.Description,
         CharityName = p.Charity.Name,
-        Photo = p.ProjectPhotos.FirstOrDefault()?.PhotoUrl,
+        Photo = p.ProjectPhotos.FirstOrDefault()?.PhotoBytes,
         p.StartDate,
         p.EndDate
     });
@@ -154,13 +154,23 @@ app.MapPost("/CharityProjects/", async (CharityAggregatorContext context, Charit
     {
         CharityProject = project,
         Description = "Photo",
-        PhotoUrl = request.Photo
+        PhotoBytes = request.Photo
     });
     
     await context.SaveChangesAsync();
-    Console.WriteLine(project.ProjectId);
     
-    return Results.Created($"/CharityProjects/{project.ProjectId}", project);
+    var response = new CharityProjectRequest
+    {
+        Name = project.Name,
+        Description = project.Description,
+        StartDate = project.StartDate,
+        EndDate = project.EndDate,
+        Category = request.Category,
+        CharityName = charity.Name,
+        Photo = request.Photo
+    };
+    
+    return Results.Created($"/CharityProjects/{project.ProjectId}", response);
 });
 
 app.MapGet("/CharityProjects/{id:int}", async (CharityAggregatorContext context, int id) =>
@@ -183,7 +193,7 @@ app.MapGet("/CharityProjects/{id:int}", async (CharityAggregatorContext context,
         Category = project.ProjectCategoryMappings.Select(pc => pc.ProjectCategory.Name),
         project.Description,
         CharityName = project.Charity.Name,
-        Photo = project.ProjectPhotos.FirstOrDefault()?.PhotoUrl,
+        Photo = project.ProjectPhotos.FirstOrDefault()?.PhotoBytes,
         project.StartDate,
         project.EndDate
     };

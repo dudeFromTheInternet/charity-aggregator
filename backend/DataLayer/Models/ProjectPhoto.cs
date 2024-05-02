@@ -11,7 +11,7 @@ public class ProjectPhoto
 
     [ForeignKey("CharityProject")]
     public int ProjectId { get; set; }
-    public string PhotoUrl { get; set; }
+    public string PhotoBytes { get; set; }
     public string Description { get; set; }
 
     public CharityProject CharityProject { get; set; }
