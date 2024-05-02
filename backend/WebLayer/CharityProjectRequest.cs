@@ -17,7 +17,7 @@ public class CharityProjectRequest
     public DateTime EndDate { get; set; }
 
     [Required]
-    public string Category { get; set; }
+    public IEnumerable<string> Category { get; set; }
 
     [Required]
     public string CharityName { get; set; }

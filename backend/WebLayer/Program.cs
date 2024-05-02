@@ -1,6 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using DataLayer;
 using DataLayer.Models;
 using Microsoft.EntityFrameworkCore;
@@ -10,9 +7,9 @@ using WebLayer;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("corsPolicy",
-        p => p
-            .WithOrigins("http://localhost:63345")
+    options.AddPolicy("corsPolicy", 
+        p => 
+            p.WithOrigins("http://localhost:63345")
         .AllowCredentials()
         .AllowAnyHeader()
         .AllowAnyMethod()
@@ -109,15 +106,15 @@ app.MapGet("/CharityProjects/", async (CharityAggregatorContext context) =>
         .Include(p => p.ProjectPhotos)
         .ToListAsync();
     
-    var response = projects.Select(p => new
+    var response = projects.Select(p => new CharityProjectRequest
     {
-        p.Name,
+        Name = p.Name,
         Category = p.ProjectCategoryMappings.Select(pc => pc.ProjectCategory.Name),
-        p.Description,
+        Description = p.Description,
         CharityName = p.Charity.Name,
         Photo = p.ProjectPhotos.FirstOrDefault()?.PhotoBytes,
-        p.StartDate,
-        p.EndDate
+        StartDate = p.StartDate,
+        EndDate = p.EndDate
     });
     
     return Results.Ok(response);
@@ -149,24 +146,27 @@ app.MapPost("/CharityProjects/", async (CharityAggregatorContext context, Charit
     
     context.CharityProjects.Add(project);
     
-    var categoryEntity = await context.ProjectCategories
-        .FirstOrDefaultAsync(c => c.Name == request.Category);
-    
-    if (categoryEntity == null)
+    foreach (var categoryName in request.Category)
     {
-        categoryEntity = new ProjectCategory
-        {
-            Name = request.Category
-        };
+        var category = await context.ProjectCategories
+            .FirstOrDefaultAsync(c => c.Name == categoryName);
         
-        context.ProjectCategories.Add(categoryEntity);
+        if (category == null)
+        {
+            category = new ProjectCategory
+            {
+                Name = categoryName
+            };
+            
+            context.ProjectCategories.Add(category);
+        }
+        
+        context.ProjectsCategoryMappings.Add(new ProjectCategoryMapping
+        {
+            CharityProject = project,
+            ProjectCategory = category
+        });
     }
-    
-    context.ProjectsCategoryMappings.Add(new ProjectCategoryMapping
-    {
-        CharityProject = project,
-        ProjectCategory = categoryEntity
-    });
     
     context.ProjectPhotos.Add(new ProjectPhoto
     {
@@ -202,18 +202,18 @@ app.MapGet("/CharityProjects/{id:int}", async (CharityAggregatorContext context,
     
     if (project == null)
     {
-        return Results.NotFound();
+        return Results.NotFound("Project not found");
     }
     
-    var response = new
+    var response = new CharityProjectRequest
     {
-        project.Name,
+        Name = project.Name,
         Category = project.ProjectCategoryMappings.Select(pc => pc.ProjectCategory.Name),
-        project.Description,
+        Description = project.Description,
         CharityName = project.Charity.Name,
         Photo = project.ProjectPhotos.FirstOrDefault()?.PhotoBytes,
-        project.StartDate,
-        project.EndDate
+        StartDate = project.StartDate,
+        EndDate = project.EndDate
     };
     
     return Results.Ok(response);
