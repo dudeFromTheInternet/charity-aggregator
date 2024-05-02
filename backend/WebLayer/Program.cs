@@ -4,6 +4,7 @@ using System.Text.Json.Serialization;
 using DataLayer;
 using DataLayer.Models;
 using Microsoft.EntityFrameworkCore;
+using WebLayer;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,7 +22,8 @@ builder.Services.AddCors(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-const string connectionString = "Server=localhost;Database=charity_database;User Id=postgres;Password=postgres;";
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+Console.WriteLine($"Connection string: {connectionString}");
 builder.Services.AddDbContext<CharityAggregatorContext>(options =>
 {
     options.UseNpgsql(connectionString);
@@ -218,29 +220,3 @@ app.MapGet("/CharityProjects/{id:int}", async (CharityAggregatorContext context,
 });
 
 app.Run();
-
-public class CharityProjectRequest
-{
-    [Required]
-    public string Name { get; set; }
-    
-    [Required]
-    public string Description { get; set; }
-
-    [Required]
-    public DateTime StartDate { get; set; }
-
-    [Required]
-    public DateTime EndDate { get; set; }
-
-    [Required]
-    public string Category { get; set; }
-
-    [Required]
-    public string CharityName { get; set; }
-
-    [Required]
-    public string Photo { get; set; }
-
-    public CharityProjectRequest() {}
-}
