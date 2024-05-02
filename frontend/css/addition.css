@@ -91,6 +91,10 @@
             font-size: 80%;
             cursor: pointer;
         }
+      #addition-completion{
+        text-align: center;
+        grid-column: 1 / -1;
+      }
     }
 }
 .addition-form {
