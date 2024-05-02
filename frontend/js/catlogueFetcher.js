@@ -23,20 +23,16 @@ const mockData = [
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    updateProjectsDisplay(mockData);
-    /*
-    fetch('your-backend-url', {
-        method: 'POST',
+    // updateProjectsDisplay(mockData);
+    fetch('https://localhost:7158/CharityProjects', {
+        method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-        })
+        }
     })
-        .then(response => response.json())
+      .then(response => response.json())
         .then(data => updateProjectsDisplay(data))
         .catch(error => console.error('Error:', error));
-     */
     });
 document.getElementById('submit-button').addEventListener('click', function() {
     const name = document.querySelector('#name-filter').value;
