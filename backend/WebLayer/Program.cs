@@ -7,6 +7,16 @@ using Microsoft.EntityFrameworkCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("corsPolicy",
+        p => p
+            .WithOrigins("http://localhost:63345")
+        .AllowCredentials()
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+        );
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -18,6 +28,8 @@ builder.Services.AddDbContext<CharityAggregatorContext>(options =>
 });
 
 var app = builder.Build();
+
+app.UseCors("corsPolicy");
 
 if (app.Environment.IsDevelopment())
 {
@@ -112,12 +124,16 @@ app.MapGet("/CharityProjects/", async (CharityAggregatorContext context) =>
 app.MapPost("/CharityProjects/", async (CharityAggregatorContext context, CharityProjectRequest request) =>
 {
     var charity = await context.Charities
-        .Include(c => c.CharityProjects)
         .FirstOrDefaultAsync(c => c.Name == request.CharityName);
     
     if (charity == null)
     {
-        return Results.NotFound("Charity not found");
+        charity = new Charity
+        {
+            Name = request.CharityName
+        };
+        
+        context.Charities.Add(charity);
     }
     
     var project = new CharityProject

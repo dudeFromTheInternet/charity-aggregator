@@ -14,18 +14,18 @@ public class Charity
     [Required]
     [StringLength(100)]
     public string Name { get; set; }
+    
+    public string? Description { get; set; }
 
-    public string Description { get; set; }
+    public string? ContactInfo { get; set; }
 
-    public string ContactInfo { get; set; }
+    // [Required]
+    // [StringLength(50)]
+    public string? Username { get; set; }
 
-    [Required]
-    [StringLength(50)]
-    public string Username { get; set; }
-
-    [Required]
-    [StringLength(100)]
-    public string PasswordHash { get; set; }
+    // [Required]
+    // [StringLength(100)]
+    public string? PasswordHash { get; set; }
 
     public IReadOnlyList<CharityPhoto> CharityPhotos { get; set; }
     public IReadOnlyList<CharityProject> CharityProjects { get; set; }
