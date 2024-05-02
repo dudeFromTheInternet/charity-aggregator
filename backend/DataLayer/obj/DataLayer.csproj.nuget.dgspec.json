@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cooluser\\js projects\\charity-aggregator\\backend\\DataLayer\\DataLayer.csproj": {}
+    "D:\\Python projects\\NetEx\\charity-aggregator\\backend\\DataLayer\\DataLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cooluser\\js projects\\charity-aggregator\\backend\\DataLayer\\DataLayer.csproj": {
+    "D:\\Python projects\\NetEx\\charity-aggregator\\backend\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cooluser\\js projects\\charity-aggregator\\backend\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "D:\\Python projects\\NetEx\\charity-aggregator\\backend\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "C:\\Users\\cooluser\\js projects\\charity-aggregator\\backend\\DataLayer\\DataLayer.csproj",
-        "packagesPath": "C:\\Users\\cooluser\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cooluser\\js projects\\charity-aggregator\\backend\\DataLayer\\obj\\",
+        "projectPath": "D:\\Python projects\\NetEx\\charity-aggregator\\backend\\DataLayer\\DataLayer.csproj",
+        "packagesPath": "C:\\Users\\maxim\\.nuget\\packages\\",
+        "outputPath": "D:\\Python projects\\NetEx\\charity-aggregator\\backend\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\cooluser\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\maxim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.2.23502.2/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
