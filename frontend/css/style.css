@@ -23,6 +23,7 @@ a{
 
 .button:hover {
   background-color: var(--background-color);
+  color: var(--font-color);
   cursor: pointer;
 }
 .logo-container{

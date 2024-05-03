@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 window.addEventListener("beforeunload", function() {
   localStorage.setItem("requestedProjectId", id);
-})
+});
 
 
 
@@ -35,3 +35,13 @@ function displayProjectData(data) {
 
   document.querySelector('.project-contacts').textContent = data.contactInfo;
 }
+const modal = document.getElementById('contactModal');
+const openButton = document.querySelector('.openModal');
+const closeButton = document.querySelector('.close');
+openButton.addEventListener('click', function() {
+  modal.style.display = "block";
+});
+
+closeButton.addEventListener('click', function() {
+  document.getElementById('contactModal').style.display = "none";
+});
