@@ -77,7 +77,11 @@ function updateProjectsDisplay(projects, clear) {
         const endDate = new Date(project.endDate).toLocaleDateString();
         const projectLink = document.createElement('a');
         projectLink.className = 'project';
-        projectLink.href = project.projectUrl;
+        projectLink.id = project.id;
+        projectLink.href = 'project.html';
+        projectLink.addEventListener('click', (e) => {
+          localStorage.setItem('requestedProjectId', project.id);
+        })
 
         const projectInfo = document.createElement('div');
         projectInfo.className = 'project-info';

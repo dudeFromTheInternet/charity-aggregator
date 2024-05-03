@@ -2,6 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  h1{
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
 }
 .project-flex-hor{
     display: flex;
@@ -27,8 +31,8 @@
     gap: 0;
 }
 img{
-    width: 20%;
-    aspect-ratio: 1/1;
+    width: 15vw;
+    height: 15vw;
 }
 p{
     min-height: 10vh;
@@ -36,23 +40,20 @@ p{
 main{
     min-height: 30vh;
 }
-h1{
-    text-align: center;
-    font-size: 200%;
-}
+
 h3 {
     margin: 0;
     text-align: center;
-    font-size: 150%;
+    font-size: clamp(0.5rem, 3vw, 2rem);
 }
 h5 {
     margin-top: 0;
-    font-size: 120%;
+  font-size: clamp(0.5rem, 2vw, 1.5rem);
     font-weight: lighter;
     font-style: italic;
 }
 span{
-    font-size: 120%;
+  font-size: clamp(0.5rem, 2vw, 1.75rem);
 }
 p{
     margin: 0;

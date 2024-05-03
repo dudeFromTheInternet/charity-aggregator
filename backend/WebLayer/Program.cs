@@ -9,7 +9,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("corsPolicy", 
         p => 
-            p.WithOrigins("http://localhost:63343")
+            p.WithOrigins("http://localhost:63342")
         .AllowCredentials()
         .AllowAnyHeader()
         .AllowAnyMethod()
@@ -108,6 +108,7 @@ app.MapGet("/CharityProjects/", async (CharityAggregatorContext context) =>
     
     var response = projects.Select(p => new CharityProjectRequest
     {
+        ID = p.ProjectId,
         Name = p.Name,
         Category = p.ProjectCategoryMappings.Select(pc => pc.ProjectCategory.Name),
         Description = p.Description,

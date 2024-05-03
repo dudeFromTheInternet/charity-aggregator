@@ -4,6 +4,7 @@ namespace WebLayer;
 
 public class CharityProjectRequest
 {
+    public int ID { get; set; }
     [Required]
     public string Name { get; set; }
     
