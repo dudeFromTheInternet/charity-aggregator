@@ -93,7 +93,7 @@ p{
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 25vw
+  width: 25vw;
 }
 
 .close {
@@ -108,4 +108,18 @@ p{
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+@media only screen and (max-width: 800px) {
+  .modal-content {
+    width: 250px;
+  }
+  .modal-content {
+    address{
+      font-size: clamp(0.5rem, 2vw, 1rem);
+    }
+    h2{
+      font-size: clamp(0.75rem, 2vw, 1.25rem);
+    }
+  }
+
 }

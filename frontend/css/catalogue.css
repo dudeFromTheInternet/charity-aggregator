@@ -49,6 +49,9 @@
       }
   }
 }
+.sidemenu-button{
+  display: none;
+}
 .projects-container{
   display: flex;
   flex-direction: column;
@@ -72,11 +75,14 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 height: 75%;
+                font-size: clamp(0.75rem, 2vw, 1rem);
             }
         }
+
         .project-name{
             height: 15%;
             margin: 0;
+          font-size: clamp(1.25rem, 3vw, 1.75rem);
         }
         h5{
             height: 8%;
@@ -93,6 +99,59 @@
 }
 footer{
     position: static;
+}
+
+@media only screen and (max-width: 800px) {
+  .sidemenu {
+    position: fixed;
+    left: -300px;
+    top: 0;
+    bottom: 0;
+    min-width: 250px;
+    transition: left 0.5s;
+    background-color: white;
+    z-index: 1000;
+  }
+  .sidemenu-button{
+    display: flex;
+    transition: left 0.5s;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50px;
+    position: fixed;
+    left: -3vh;
+    top: 48vh;
+    height: 7vh;
+    width: 7vh;
+    background-color: rgba(144, 198, 249, 1);
+    color: white;
+    font-size: 4vh;
+    font-weight: bold;
+  }
+  .sidemenu-button.active{
+    left: 260px;
+    z-index: 1001;
+  }
+  .sidemenu.active {
+    left: 0;
+  }
+  .project{
+      width: 70%;
+      justify-content: flex-start;
+      padding: 0;
+      margin-left: 10px;
+      gap: 0;
+  }
+  .projects-container{
+    .project-info{
+      width: 50%;
+    }
+
+    .project-photo{
+      height: 70%;
+    }
+  }
 }
 
 

@@ -118,3 +118,22 @@ function updateProjectsDisplay(projects, clear) {
         projectsContainer.appendChild(projectLink);
     });
 }
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.visualViewport.width >= 800){
+    return;
+  }
+  const menu = document.querySelector('.sidemenu');
+  const toggleButton = document.querySelector('.sidemenu-button');
+
+
+  toggleButton.onclick = function() {
+    menu.classList.toggle('active');
+    if(toggleButton.classList.toggle('active')){
+      toggleButton.value = '<';
+    } else {
+      toggleButton.value = '>';
+    }
+  };
+});
+
+
