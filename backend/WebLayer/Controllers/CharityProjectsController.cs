@@ -50,6 +50,11 @@ namespace WebLayer.Controllers
 
                 context.Charities.Add(charity);
             }
+            
+            if (request.StartDate != null)
+                request.StartDate = request.StartDate.Value.ToUniversalTime();
+            if (request.EndDate != null)
+                request.EndDate = request.EndDate.Value.ToUniversalTime();
 
             var project = new CharityProject
             {
