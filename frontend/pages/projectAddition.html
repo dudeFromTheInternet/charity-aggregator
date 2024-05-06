@@ -6,54 +6,55 @@
     <link rel="stylesheet" href="../css/addition.css">
     <link rel="icon" href="../img/logo.png" sizes="any">
     <script src="../js/app.js"></script>
+
     <title>Д.А.Б.Р.О. - Добавить проект</title>
 </head>
 <body>
 <img class="wave" src="../img/background-elem.png">
 <img class="wave-right" src="../img/background-elem.png">
 <header class="header-main">
-    <div class="logo-container">
-        <a href="index.html" class = "logo">
-            <h1 class="logo-title">Д.А.Б.Р.О</h1>
-        </a>
-    </div>
-    <nav class="navbar">
-        <ul class="navmenu">
-            <li><a href="catalogue.html" class="menu button">Каталог</a></li>
-            <li><a class="menu button">Статистика</a></li>
-            <li><a class="menu button">Добавить проект</a></li>
-            <li><a class="menu button">Статьи</a></li>
-            <li><a class="menu button">Добавить статью</a></li>
-        </ul>
-    </nav>
-    <nav class="navbar">
-        <ul class="authmenu">
-            <li><a href="login.html" class="auth logIn button">Войти</a></li>
-            <li><a href="register.html" class="auth">Регистрация</a></li>
-        </ul>
-    </nav>
+  <div class="logo-container">
+    <a href="index.html" class = "logo">
+      <h1 class="logo-title">Д.А.Б.Р.О</h1>
+    </a>
+  </div>
+  <nav class="navbar">
+    <ul class="navmenu">
+      <li><a href="catalogue.html" class="menu button">Каталог</a></li>
+      <li><a href="" class="menu button">Статистика</a></li>
+      <li><a href="projectAddition.html" class="menu button">Добавить проект</a></li>
+      <li><a href="articlesList.html" class="menu button">Статьи</a></li>
+      <li><a href="" class="menu button">Добавить статью</a></li>
+    </ul>
+  </nav>
+  <nav class="navbar">
+    <ul class="authmenu">
+      <li><a href="login.html" class="auth logIn button">Войти</a></li>
+      <li><a href="register.html" class="auth">Регистрация</a></li>
+    </ul>
+  </nav>
 </header>
 <header class="header-main header-main-dynamic">
-    <div class="logo-container">
-        <a href="index.html" class = "logo">
-            <h1 class="logo-title">Д.А.Б.Р.О</h1>
-        </a>
-    </div>
-    <nav class="navbar">
-        <ul class="navmenu">
-            <li><a href="catalogue.html" class="menu button">Каталог</a></li>
-            <li><a class="menu button">Статистика</a></li>
-            <li><a class="menu button">Добавить проект</a></li>
-            <li><a class="menu button">Статьи</a></li>
-            <li><a class="menu button">Добавить статью</a></li>
-        </ul>
-    </nav>
-    <nav class="navbar">
-        <ul class="authmenu">
-            <li><a href="login.html" class="auth logIn button">Войти</a></li>
-            <li><a href="register.html" class="auth">Регистрация</a></li>
-        </ul>
-    </nav>
+  <div class="logo-container">
+    <a href="index.html" class = "logo">
+      <h1 class="logo-title">Д.А.Б.Р.О</h1>
+    </a>
+  </div>
+  <nav class="navbar">
+    <ul class="navmenu">
+      <li><a href="catalogue.html" class="menu button">Каталог</a></li>
+      <li><a href="" class="menu button">Статистика</a></li>
+      <li><a href="projectAddition.html" class="menu button">Добавить проект</a></li>
+      <li><a href="articlesList.html" class="menu button">Статьи</a></li>
+      <li><a href="" class="menu button">Добавить статью</a></li>
+    </ul>
+  </nav>
+  <nav class="navbar">
+    <ul class="authmenu">
+      <li><a href="login.html" class="auth logIn button">Войти</a></li>
+      <li><a href="register.html" class="auth">Регистрация</a></li>
+    </ul>
+  </nav>
 </header>
 <div class="addition-content">
     <form class="addition-form">
@@ -73,9 +74,11 @@
             <input accept="image/*" type='file' id="addition-image">
         </aside>
             <textarea id="addition-text" placeholder="Опишите о чем ваш проект"></textarea>
-        <input type="submit" id="submit-addition">
+        <input type="button" id="submit-addition" value="Добавить">
+      <span id="addition-completion"></span>
     </form>
     <script  src="../js/addition.js"></script>
 </div>
+<script src="../js/projectAddition.js"></script>
 </body>
 </html>

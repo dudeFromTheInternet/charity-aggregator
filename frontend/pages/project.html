@@ -12,72 +12,77 @@
     <img class="wave" src="../img/background-elem.png">
     <img class="wave-right" src="../img/background-elem.png">
     <header class="header-main">
-    <div class="logo-container">
+      <div class="logo-container">
         <a href="index.html" class = "logo">
-            <h1 class="logo-title">Д.А.Б.Р.О</h1>
+          <h1 class="logo-title">Д.А.Б.Р.О</h1>
         </a>
-    </div>
-    <nav class="navbar">
+      </div>
+      <nav class="navbar">
         <ul class="navmenu">
-            <li><a href="catalogue.html" class="menu button">Каталог</a></li>
-            <li><a class="menu button">Статистика</a></li>
-            <li><a class="menu button">Добавить проект</a></li>
-            <li><a class="menu button">Статьи</a></li>
-            <li><a class="menu button">Добавить статью</a></li>
+          <li><a href="catalogue.html" class="menu button">Каталог</a></li>
+          <li><a href="" class="menu button">Статистика</a></li>
+          <li><a href="projectAddition.html" class="menu button">Добавить проект</a></li>
+          <li><a href="articlesList.html" class="menu button">Статьи</a></li>
+          <li><a href="" class="menu button">Добавить статью</a></li>
         </ul>
-    </nav>
-    <nav class="navbar">
+      </nav>
+      <nav class="navbar">
         <ul class="authmenu">
-            <li><a href="login.html" class="auth logIn button">Войти</a></li>
-            <li><a href="register.html" class="auth">Регистрация</a></li>
+          <li><a href="login.html" class="auth logIn button">Войти</a></li>
+          <li><a href="register.html" class="auth">Регистрация</a></li>
         </ul>
-    </nav>
-</header>
+      </nav>
+    </header>
     <header class="header-main header-main-dynamic">
-    <div class="logo-container">
+      <div class="logo-container">
         <a href="index.html" class = "logo">
-            <h1 class="logo-title">Д.А.Б.Р.О</h1>
+          <h1 class="logo-title">Д.А.Б.Р.О</h1>
         </a>
-    </div>
-    <nav class="navbar">
+      </div>
+      <nav class="navbar">
         <ul class="navmenu">
-            <li><a href="catalogue.html" class="menu button">Каталог</a></li>
-            <li><a class="menu button">Статистика</a></li>
-            <li><a class="menu button">Добавить проект</a></li>
-            <li><a class="menu button">Статьи</a></li>
-            <li><a class="menu button">Добавить статью</a></li>
+          <li><a href="catalogue.html" class="menu button">Каталог</a></li>
+          <li><a href="" class="menu button">Статистика</a></li>
+          <li><a href="projectAddition.html" class="menu button">Добавить проект</a></li>
+          <li><a href="articlesList.html" class="menu button">Статьи</a></li>
+          <li><a href="" class="menu button">Добавить статью</a></li>
         </ul>
-    </nav>
-    <nav class="navbar">
+      </nav>
+      <nav class="navbar">
         <ul class="authmenu">
-            <li><a href="login.html" class="auth logIn button">Войти</a></li>
-            <li><a href="register.html" class="auth">Регистрация</a></li>
+          <li><a href="login.html" class="auth logIn button">Войти</a></li>
+          <li><a href="register.html" class="auth">Регистрация</a></li>
         </ul>
-    </nav>
-</header>
+      </nav>
+    </header>
     <div class="project-content">
         <div class="project-flex-ver project-main">
-            <h1 class="project-title">Название проекта</h1>
+            <h1 class="project-title"></h1>
             <main class="project-flex-hor">
                 <div class="project-flex-ver project-main-info">
                     <div class="project-flex-hor">
                         <h3 class="project-category">
-                            Категория
                         </h3>
                         <div class="project-flex-ver">
-                            <span>дата начала - дата конца</span>
-                            <h5 class="project-charity">Организатор проекта</h5>
+                            <span></span>
+                            <h5 class="project-charity"></h5>
                         </div>
                     </div>
                     <p>
-                        тут описание проекта
                     </p>
                 </div>
                 <img src="../img/favicon.ico" alt="фото или лого проекта">
             </main>
-            <address class="project-contacts">
-                Контакты и как помочь
-            </address>
+          <button class="openModal button">Я хочу помочь</button>
+          <div id="contactModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Контакты и способы помочь</h2>
+              <address class="project-contacts">
+                здесь будут контакты и пр.
+              </address>
+            </div>
+          </div>
         </div>
     </div>
 <script src="../js/project.js"></script>

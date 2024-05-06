@@ -17,6 +17,7 @@
             padding: 1%;
             width: 80%;
             justify-self: center;
+            box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
         }
         .addition-main-info{
             display: flex;
@@ -48,6 +49,7 @@
                 border: none;
                 border-radius: 3px;
                 padding: 2% 0 2% 1%;
+              box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
             }
             .addition-input{
                 width: 80%;
@@ -57,6 +59,7 @@
                 border: none;
                 font-family: "JetBrains Mono";
                 font-size: 100%;
+              box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
             }
         }
         .addition-photo{
@@ -71,6 +74,7 @@
                 aspect-ratio: 1/1;
                 background-color: #9e9088;
                 margin-bottom: 5%;
+              box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
             }
             #addition-image{
                 width: 50%;
@@ -81,16 +85,22 @@
         #submit-addition{
             background-color: var(--main-color);
             border: none;
+            padding: .5% .8% .5% .8%;
             border-radius: 5px;
-            padding: 1%;
             display: flex;
+            width: auto;
             justify-content: center;
             align-items: center;
-            width: 20%;
+            font-size: clamp(0.5rem, 2vw, 1.75rem);
             font-family: "JetBrains Mono";
-            font-size: 80%;
+            color: white;
             cursor: pointer;
+          box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
         }
+      #addition-completion{
+        text-align: center;
+        grid-column: 1 / -1;
+      }
     }
 }
 .addition-form {

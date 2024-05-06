@@ -77,7 +77,11 @@ function updateProjectsDisplay(projects, clear) {
         const endDate = new Date(project.endDate).toLocaleDateString();
         const projectLink = document.createElement('a');
         projectLink.className = 'project';
-        projectLink.href = project.projectUrl;
+        projectLink.id = project.id;
+        projectLink.href = 'project.html';
+        projectLink.addEventListener('click', (e) => {
+          localStorage.setItem('requestedProjectId', project.id);
+        })
 
         const projectInfo = document.createElement('div');
         projectInfo.className = 'project-info';
@@ -114,3 +118,22 @@ function updateProjectsDisplay(projects, clear) {
         projectsContainer.appendChild(projectLink);
     });
 }
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.visualViewport.width >= 800){
+    return;
+  }
+  const menu = document.querySelector('.sidemenu');
+  const toggleButton = document.querySelector('.sidemenu-button');
+
+
+  toggleButton.onclick = function() {
+    menu.classList.toggle('active');
+    if(toggleButton.classList.toggle('active')){
+      toggleButton.value = '<';
+    } else {
+      toggleButton.value = '>';
+    }
+  };
+});
+
+

@@ -23,6 +23,7 @@ a{
 
 .button:hover {
   background-color: var(--background-color);
+  color: var(--font-color);
   cursor: pointer;
 }
 .logo-container{
@@ -358,14 +359,14 @@ textarea {
     .logo-container{
       display: flex;
       justify-content: center;
-      margin-bottom: 15px;
+      width: 100%;
       .logo{
         margin: 0;
         display: flex;
         justify-content: center;
-        img{
-          width: 50px;
-          height: 50px;
+        align-items: center;
+        h1{
+          font-size: 5vw;
         }
       }
     }
