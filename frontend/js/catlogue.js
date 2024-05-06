@@ -100,7 +100,7 @@ function updateProjectsDisplay(projects, clear) {
 
         const projectPhoto = document.createElement('img');
         projectPhoto.className = 'project-photo';
-        projectPhoto.src = project.photoUrl;
+        projectPhoto.src = '../img/projectPlaceholder.png';
         projectPhoto.alt = 'project photo';
 
         projectInfo.appendChild(projectName);
