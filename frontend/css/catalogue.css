@@ -53,6 +53,7 @@
   display: none;
 }
 .projects-container{
+  width: 80vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -111,6 +112,10 @@ footer{
     transition: left 0.5s;
     background-color: white;
     z-index: 1000;
+  }
+  .projects-container{
+    justify-content: center;
+    width: 95vw;
   }
   .sidemenu-button{
     display: flex;

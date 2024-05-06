@@ -36,34 +36,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 document.getElementById('submit-button').addEventListener('click', function() {
     const name = document.querySelector('#name-filter').value;
-    const startDate = document.querySelector('#start-date').value;
+    const startDateRaw = document.querySelector('#start-date').value;
     const category = document.querySelector('#category-filter').value;
-    const endDate = document.querySelector('#end-date').value;
+    const endDateRaw = document.querySelector('#end-date').value;
+    const startDate = startDateRaw ? new Date(startDateRaw).toISOString() : '';
+    const endDate = endDateRaw ? new Date(endDateRaw).toISOString() : '';
     const charityName = document.querySelector('#charity-filter').value;
-    fetch('your-backend-url', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            name: name,
-            startDate: startDate,
-            endDate: endDate,
-            category: category,
-            charityName: charityName
-        })
+    const queryParams = new URLSearchParams({
+      name: name,
+      startDate: startDate,
+      endDate: endDate,
+      charityName: charityName,
+      category: category,
+    }).toString();
+
+    fetch(`https://localhost:7158/CharityProjects/filter?${queryParams}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      }
     })
-        .then(response => response.json())
-        .then(data => updateProjectsDisplay(data, true))
-        .catch(error => console.error('Error:', error));
-    alert(JSON.stringify({
-        name: name,
-        startDate: startDate,
-        endDate: endDate,
-        category: category,
-        charityName: charityName
-    }));
-});
+      .then(response => response.json())
+      .then(data => updateProjectsDisplay(data, true))
+      .catch(error => console.error('Error:', error));
+  });
 
 function updateProjectsDisplay(projects, clear) {
     const projectsContainer = document.querySelector('.projects-container');
@@ -119,9 +115,6 @@ function updateProjectsDisplay(projects, clear) {
     });
 }
 document.addEventListener('DOMContentLoaded', function() {
-  if (window.visualViewport.width >= 800){
-    return;
-  }
   const menu = document.querySelector('.sidemenu');
   const toggleButton = document.querySelector('.sidemenu-button');
 
