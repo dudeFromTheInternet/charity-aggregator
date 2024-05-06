@@ -338,6 +338,29 @@ textarea {
   body{
     margin: 0;
   }
+  footer{
+    position: static;
+  }
+  .title-container{
+    height: 10vh;
+    width: 50vw;
+    align-self: center;
+    img{
+      height: auto;
+      width: auto;
+    }
+    .title-flex-ver{
+      height: 100%;
+
+      h1{
+        font-size: 8vw;
+      }
+      h5{
+        font-size: 1.75vw;
+      }
+    }
+
+  }
   .header-main{
     position: relative;
     display: flex;
