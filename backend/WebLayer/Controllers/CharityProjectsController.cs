@@ -147,13 +147,13 @@ namespace WebLayer.Controllers
                 .Include(p => p.ProjectPhotos);
 
             if (!string.IsNullOrWhiteSpace(filter.Name))
-                query = query.Where(p => p.Name.Contains(filter.Name));
+                query = query.Where(p => p.Name.ToLower().Contains(filter.Name.ToLower()));
 
             if (!string.IsNullOrWhiteSpace(filter.Description))
-                query = query.Where(p => p.Description.Contains(filter.Description));
+                query = query.Where(p => p.Description.ToLower().Contains(filter.Description.ToLower()));
 
             if (!string.IsNullOrWhiteSpace(filter.CharityName))
-                query = query.Where(p => p.Charity.Name.Contains(filter.CharityName));
+                query = query.Where(p => p.Charity.Name.ToLower().Contains(filter.CharityName.ToLower()));
 
             if (filter.StartDate != null)
                 query = query.Where(p => p.StartDate >= filter.StartDate);
@@ -161,7 +161,7 @@ namespace WebLayer.Controllers
             if (filter.EndDate != null)
                 query = query.Where(p => p.EndDate <= filter.EndDate);
 
-            if (filter.Category != null && filter.Category.Any())
+            if (filter.Category != null && filter.Category.Any(a => !string.IsNullOrWhiteSpace(a)))
             {
                 query = query.Where(p =>
                     p.ProjectCategoryMappings.Any(pc => filter.Category.Contains(pc.ProjectCategory.Name)));

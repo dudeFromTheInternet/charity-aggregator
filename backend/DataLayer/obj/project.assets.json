@@ -538,25 +538,24 @@
     ]
   },
   "packageFolders": {
-    "/Users/inxan/.nuget/packages/": {}
+    "C:\\Users\\cooluser\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/inxan/Desktop/charity-aggregator2/backend/DataLayer/DataLayer.csproj",
+      "projectUniqueName": "C:\\Users\\cooluser\\js projects\\charity-aggregator\\backend\\DataLayer\\DataLayer.csproj",
       "projectName": "DataLayer",
-      "projectPath": "/Users/inxan/Desktop/charity-aggregator2/backend/DataLayer/DataLayer.csproj",
-      "packagesPath": "/Users/inxan/.nuget/packages/",
-      "outputPath": "/Users/inxan/Desktop/charity-aggregator2/backend/DataLayer/obj/",
+      "projectPath": "C:\\Users\\cooluser\\js projects\\charity-aggregator\\backend\\DataLayer\\DataLayer.csproj",
+      "packagesPath": "C:\\Users\\cooluser\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cooluser\\js projects\\charity-aggregator\\backend\\DataLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/inxan/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\cooluser\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -596,7 +595,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.2.23502.2/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
