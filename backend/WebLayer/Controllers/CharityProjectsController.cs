@@ -22,6 +22,7 @@ namespace WebLayer.Controllers
 
             var response = projects.Select(p => new CharityProjectRequest
             {
+                ID = p.ProjectId,
                 Name = p.Name,
                 Category = p.ProjectCategoryMappings.Select(pc => pc.ProjectCategory.Name),
                 Description = p.Description,
@@ -93,6 +94,7 @@ namespace WebLayer.Controllers
 
             var response = new CharityProjectRequest
             {
+                ID = project.ProjectId,
                 Name = project.Name,
                 Description = project.Description,
                 StartDate = project.StartDate,
@@ -122,6 +124,7 @@ namespace WebLayer.Controllers
 
             var response = new CharityProjectRequest
             {
+                ID = project.ProjectId,
                 Name = project.Name,
                 Category = project.ProjectCategoryMappings.Select(pc => pc.ProjectCategory.Name),
                 Description = project.Description,
@@ -168,6 +171,7 @@ namespace WebLayer.Controllers
 
             var response = projects.Select(p => new CharityProjectRequest
             {
+                ID = p.ProjectId,
                 Name = p.Name,
                 Category = p.ProjectCategoryMappings.Select(pc => pc.ProjectCategory.Name),
                 Description = p.Description,
