@@ -67,7 +67,7 @@ p{
   border-radius: 10px;
   width: auto;
   height: 5vh;
-  font-size: clamp(0.5rem, 2vw, 1.75rem);
+  font-size: clamp(0.75rem, 1.5vw, 1.25rem);
   color: white;
   padding: 10px;
   align-items: center;
