@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     catSearch.addEventListener('input', (event) => {
       const Checkboxes = document.querySelectorAll('input[name="category"]');
       Checkboxes.forEach(checkbox => {
-        if (!checkbox.value.includes(catSearch.value)) {
+        if (!checkbox.value.includes(catSearch.value) && !checkbox.checked) {
           checkbox.parentElement.parentElement.style.display = 'none';
           checkbox.style.display = 'none';
         } else {
@@ -53,8 +53,22 @@ document.addEventListener('DOMContentLoaded', function() {
           checkbox.style.display = '';
         }
       });
-    })
     });
+    const inputField = document.getElementById('category-filter-search');
+    const checkboxGroup = document.querySelector('.checkbox-group');
+    const container = document.querySelector('.category-search-container');
+
+    inputField.addEventListener('click', function(event) {
+      checkboxGroup.classList.toggle('hidden');
+      event.stopPropagation();
+    });
+
+    document.addEventListener('click', function(event) {
+      if (!container.contains(event.target)) {
+        checkboxGroup.classList.add('hidden');
+      }
+    });
+});
 document.getElementById('submit-button').addEventListener('click', function() {
     const name = document.querySelector('#name-filter').value;
     const startDateRaw = document.querySelector('#start-date').value;
