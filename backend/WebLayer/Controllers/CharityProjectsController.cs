@@ -34,7 +34,17 @@ namespace WebLayer.Controllers
 
             return Ok(response);
         }
+        [HttpGet("allCategories")]
+        public async Task<IActionResult> GetAllCategories()
+        {
+            var response = await context
+                .ProjectCategories
+                .Select(c => c.Name)
+                .Distinct()
+                .ToArrayAsync();
 
+            return Ok(response);
+        }
         [HttpPost]
         public async Task<IActionResult> PostCharityProject(CharityProjectRequest request)
         {
@@ -165,7 +175,7 @@ namespace WebLayer.Controllers
 
             if (filter.EndDate != null)
                 query = query.Where(p => p.EndDate <= filter.EndDate);
-
+            filter.Category = filter.Category?.ToArray()[0].Split(',');
             if (filter.Category != null && filter.Category.Any(a => !string.IsNullOrWhiteSpace(a)))
             {
                 query = query.Where(p =>

@@ -23,7 +23,15 @@ const mockData = [
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    // updateProjectsDisplay(mockData);
+    fetch(`https://localhost:7158/CharityProjects/allCategories`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    })
+      .then(response => response.json())
+      .then(data => updateCategoryFilter(data))
+      .catch(error => console.error('Error:', error));
     fetch('https://localhost:7158/CharityProjects', {
         method: 'GET',
         headers: {
@@ -33,11 +41,25 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(response => response.json())
         .then(data => updateProjectsDisplay(data))
         .catch(error => console.error('Error:', error));
+    const catSearch = document.getElementById('category-filter-search');
+    catSearch.addEventListener('input', (event) => {
+      const Checkboxes = document.querySelectorAll('input[name="category"]');
+      Checkboxes.forEach(checkbox => {
+        if (!checkbox.value.includes(catSearch.value)) {
+          checkbox.parentElement.parentElement.style.display = 'none';
+          checkbox.style.display = 'none';
+        } else {
+          checkbox.parentElement.parentElement.style.display = '';
+          checkbox.style.display = '';
+        }
+      });
+    })
     });
 document.getElementById('submit-button').addEventListener('click', function() {
     const name = document.querySelector('#name-filter').value;
     const startDateRaw = document.querySelector('#start-date').value;
-    const category = document.querySelector('#category-filter').value;
+    const checkedCheckboxes = document.querySelectorAll('input[name="category"]:checked');
+    const category = Array.from(checkedCheckboxes).map(checkbox => checkbox.value);
     const endDateRaw = document.querySelector('#end-date').value;
     const startDate = startDateRaw ? new Date(startDateRaw).toISOString() : '';
     const endDate = endDateRaw ? new Date(endDateRaw).toISOString() : '';
@@ -60,6 +82,24 @@ document.getElementById('submit-button').addEventListener('click', function() {
       .then(data => updateProjectsDisplay(data, true))
       .catch(error => console.error('Error:', error));
   });
+
+function updateCategoryFilter(data) {
+  data = data.sort((a, b) => a.localeCompare(b));
+  const ulElement = document.querySelector('.checkbox-group');
+
+  data.forEach(category => {
+    const liElement = document.createElement('li');
+    const labelElement = document.createElement('label');
+    const inputElement = document.createElement('input');
+    inputElement.type = 'checkbox';
+    inputElement.name = 'category';
+    inputElement.value = category;
+    labelElement.appendChild(inputElement);
+    labelElement.append(` ${category}`);
+    liElement.appendChild(labelElement);
+    ulElement.appendChild(liElement);
+  });
+}
 
 function updateProjectsDisplay(projects, clear) {
     const projectsContainer = document.querySelector('.projects-container');
