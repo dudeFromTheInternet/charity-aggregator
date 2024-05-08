@@ -3,16 +3,41 @@
     display: flex;
     flex-direction: row;
     .sidemenu{
-      .checkbox-group{
-        list-style: none;
-        padding-left: 0;
-        max-height: 20vh;
-        margin-top: 0;
-        overflow-y: scroll;
-        scrollbar-width: thin;
-        background-color: var(--secondary-color);
-        border-radius: 10px;
+      .category-search-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:0;
+        margin-bottom: 1vh;
+        #category-filter-search{
+          margin-bottom: 0;
+        }
+        .checkbox-group{
+          list-style: none;
+          padding-left: 0;
+          max-height: 20vh;
+          width: 92%;
+          margin-top: 0;
+          overflow-y: scroll;
+          scrollbar-width: thin;
+          background-color: var(--secondary-color);
+          margin-bottom: 0;
+          li{
+            padding: 1%;
+            border-bottom: 1px solid rgba(78, 71, 67, 0.5);
+            label{
+              cursor: pointer;
+              display: flex;
+              width: 100%;
+            }
+            
+          }
+          li:hover{
+            background-color: rgba(237, 128, 71, 0.5);
+          }
+        }
       }
+
       background-color: var(--main-color);
       border-radius: 20px;
 
