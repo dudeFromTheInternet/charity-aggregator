@@ -4,6 +4,9 @@
     flex-direction: row;
     .sidemenu{
       .category-search-container{
+        label{
+          width: 100%;
+        }
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -16,7 +19,7 @@
           list-style: none;
           padding-left: 0;
           max-height: 20vh;
-          width: 92%;
+          width: 95%;
           margin-top: 0;
           overflow-y: scroll;
           scrollbar-width: thin;
