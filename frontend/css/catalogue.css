@@ -30,7 +30,7 @@
               display: flex;
               width: 100%;
             }
-            
+
           }
           li:hover{
             background-color: rgba(237, 128, 71, 0.5);
@@ -45,7 +45,7 @@
       flex-direction: column;
       justify-content: flex-start;
 
-      margin: 20px 40px 20px 20px;
+      margin: 20px 1.5vw 20px 20px;
       padding: 10px;
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
       min-height: 600px;
@@ -93,6 +93,8 @@
   display: none;
 }
 .projects-container{
+  list-style: none;
+  padding: 0;
   width: 80vw;
   max-height: 150vh;
   overflow-y: scroll;

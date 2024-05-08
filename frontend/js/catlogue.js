@@ -125,6 +125,7 @@ function updateProjectsDisplay(projects, clear) {
     projects.forEach(project => {
         const startDate = new Date(project.startDate).toLocaleDateString();
         const endDate = new Date(project.endDate).toLocaleDateString();
+        const li = document.createElement('li');
         const projectLink = document.createElement('a');
         projectLink.className = 'project';
         projectLink.id = project.id;
@@ -164,8 +165,8 @@ function updateProjectsDisplay(projects, clear) {
         projectInfo.appendChild(projectDescription);
         projectLink.appendChild(projectInfo);
         projectLink.appendChild(projectPhoto);
-
-        projectsContainer.appendChild(projectLink);
+        li.appendChild(projectLink)
+        projectsContainer.appendChild(li);
     });
 }
 document.addEventListener('DOMContentLoaded', function() {
