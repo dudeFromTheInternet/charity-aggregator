@@ -8,7 +8,7 @@ namespace WebLayer.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CharityProjectsController(CharityAggregatorContext context) : Controller
+    public class CharityProjectsController(CharityAggregatorContext context) : Controller   
     {
         [HttpGet]
         public async Task<IActionResult> GetCharityProjects()
