@@ -183,6 +183,10 @@ footer{
   background-color: #7D8786;
   color: white;
 }
+.footer-hidden{
+  position: static;
+  visibility: hidden;
+}
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
