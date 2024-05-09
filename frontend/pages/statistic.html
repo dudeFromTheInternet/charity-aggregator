@@ -4,15 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Д.А.Б.Р.О. - Агрегатор Благотворительных Организаций</title>
+  <title>Д.А.Б.Р.О. - Статистика</title>
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/statistic.css">
   <meta name="description" content="Российский агрегатор благотворительных проектов и организаций">
-
   <link rel="icon" href="../img/logo.png" sizes="any">
-
   <link rel="apple-touch-icon" href="../img/icon.png">
-
   <link rel="manifest" href="../site.webmanifest">
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -64,30 +61,25 @@
     </ul>
   </nav>
 </header>
-  <script src="../js/app.js"></script>
-  <div class="title-container">
-    <img src="../img/logo.png" alt="logo">
-    <div class="title-flex-ver">
-      <h1 class="title">Д.А.Б.Р.О.</h1>
-      <h5 class="secondary-title">Агрегатор благотворительных организаций</h5>
-    </div>
+<script src="../js/app.js"></script>
+<h1 class="stats-title">Статистика</h1>
+<h2 class="stats-text"></h2>
+<div class="canvas-holder-holder">
+  <div class="canvas-holder">
+    <canvas id="histogram" width="300" height="300"></canvas>
   </div>
-  <article class="welcoming-speech">
-    Приветствуем вас на нашем сайте – центре добрых дел и поддержки тех, кто нуждается в помощи!
-    Здесь вы найдете широкий спектр благотворительных организаций, объединенных общей целью – делать мир лучше.<br>
-    <br>
-    Мы стремимся создать платформу, где каждый желающий может найти способы помочь тем, кто в этом нуждается.
-    Наш сайт - это не просто каталог благотворительных организаций, это место, где идеи встречаются с действием.
-    Здесь вы сможете найти проекты, которые соответствуют вашим убеждениям и ценностям,
-    и внести свой вклад в реализацию важных социальных и гуманитарных инициатив.<br>
-    <br>
-    Мы приглашаем вас присоединиться к нашему сообществу, вдохновляться и вдохновлять других на добрые поступки.
-    Вместе мы можем сделать больше и изменить мир к лучшему!
-  </article>
-  <div class="to-catalogue-container"><a href="catalogue.html" class="to-catalogue button"><h2>каталог</h2></a></div>
+  <div class="canvas-holder">
+    <canvas id="histogram2" width="300" height="300"></canvas>
+  </div>
+</div>
+
 <footer>
-Добровольческий Агрегатор Благотворительных Организаций
+  Добровольческий Агрегатор Благотворительных Организаций
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../js/statistic.mjs">
+
+</script>
 </body>
 
 </html>

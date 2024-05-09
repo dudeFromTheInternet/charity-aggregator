@@ -1,0 +1,25 @@
+.body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stats-title{
+  text-align: center;
+}
+.stats-text{
+  text-align: center;
+}
+.canvas-holder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:40vw;
+  height:60vh;
+  z-index: 1001;
+}
+.canvas-holder-holder{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
