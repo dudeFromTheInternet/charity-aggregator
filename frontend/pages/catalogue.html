@@ -64,21 +64,24 @@
     <label>
       <input class="filter-input" id="charity-filter" name="charity-name" placeholder="Название организатора">
     </label>
-    <label>
-      <input class="filter-input" id="category-filter" name="category" placeholder="Категория">
-    </label>
-    <label>
+    <div class="category-search-container">
+      <label><input placeholder="Поиск по категориям🔎" class="filter-input" id="category-filter-search"></label>
+      <ul class="checkbox-group hidden">
+
+      </ul>
+    </div>
+    <label class="date-label">
       дата старта компании
       <input class="filter-date" id="start-date" type="date" name="name">
     </label>
-    <label>
+    <label class="date-label">
       дата конца компании
       <input class="filter-date" id="end-date" type="date" name="name">
     </label>
     <input class="filter-button" id="submit-button" type="button" value="Поиск">
   </form>
-  <div class="projects-container">
-    <a class="project">
+  <ul class="projects-container">
+    <li><a class="project">
         <div class="project-info">
           <h2 class="project-name">
             Название проекта
@@ -100,8 +103,8 @@
           </p>
         </div>
         <img class="project-photo" alt="project photo" src="../img/projectPlaceholder.png">
-    </a>
-    <a class="project">
+    </a></li>
+    <li><a class="project">
       <div class="project-info">
         <h2 class="project-name">
           Название проекта
@@ -117,8 +120,8 @@
         </p>
       </div>
       <img class="project-photo" alt="project photo" src="../img/icon.png">
-    </a>
-    <a class="project">
+    </a></li>
+    <li><a class="project">
       <div class="project-info">
         <h2 class="project-name">
           Название проекта
@@ -134,8 +137,8 @@
         </p>
       </div>
       <img class="project-photo" alt="project photo" src="../img/icon.png">
-    </a>
-    <a class="project">
+    </a></li>
+    <li><a class="project">
       <div class="project-info">
         <h2 class="project-name">
           Название проекта
@@ -151,8 +154,8 @@
         </p>
       </div>
       <img class="project-photo" alt="project photo" src="../img/icon.png">
-    </a>
-  </div>
+    </a></li>
+  </ul>
 
 </div>
 <script src="../js/catlogue.js"></script>
