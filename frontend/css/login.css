@@ -22,14 +22,10 @@ body{
     flex-direction: column;
     .auth-input{
       aspect-ratio: 20/2;
-      font-size: 1.5vw;
     }
   }
   a{
     text-decoration-line: underline;
   }
-}
-footer{
-  position: static;
 }
 

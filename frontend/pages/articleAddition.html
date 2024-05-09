@@ -1,17 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/addition.css">
-    <link rel="icon" href="../img/logo.png" sizes="any">
-    <script src="../js/app.js"></script>
-
-    <title>Д.А.Б.Р.О. - Добавить проект</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
 </head>
 <body>
-<img class="wave" src="../img/background-elem.png">
-<img class="wave-right" src="../img/background-elem.png">
 <header class="header-main">
   <div class="logo-container">
     <a href="index.html" class = "logo">
@@ -56,30 +49,6 @@
     </ul>
   </nav>
 </header>
-<div class="addition-content">
-    <form class="addition-form">
-        <h1>Добавьте свой проект</h1>
-        <main class="addition-main-info">
-                <input id="addition-name" class="addition-input" placeholder="Название проекта" maxlength="30">
-            <div class="date-container">
-                <span>Дата действия проекта:</span>
-                <span class="date-con">
-                    С <input id="addition-start-date" type="date" class="addition-date"> По <input id="addition-end-date" type="date" class="addition-date">
-                </span>
-            </div>
-                <input name="category" id="addition-category" class="addition-input" placeholder="Категория проекта">
-        </main>
-        <aside class="addition-photo">
-            <img id="preview" src="#" class="preview" alt="Логотип или фото проекта">
-            <input accept="image/*" type='file' id="addition-image">
-        </aside>
-            <textarea id="addition-text" placeholder="Опишите о чем ваш проект"></textarea>
-        <input type="button" id="submit-addition" value="Добавить">
-      <span id="addition-completion"></span>
-    </form>
-    <script  src="../js/addition.js"></script>
-</div>
-<script src="../js/projectAddition.js"></script>
 
 </body>
 </html>

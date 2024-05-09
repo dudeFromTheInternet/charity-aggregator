@@ -34,6 +34,9 @@
   padding: 0 25vw 0 25vw;
   margin: 20px 0 20px 0;
   text-align: justify;
+  .stats-text{
+    text-align: center;
+  }
 }
 .to-catalogue-container{
   display: flex;

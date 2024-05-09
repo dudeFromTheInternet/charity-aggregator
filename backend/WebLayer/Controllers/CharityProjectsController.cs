@@ -45,6 +45,25 @@ namespace WebLayer.Controllers
 
             return Ok(response);
         }
+        
+        [HttpGet("statistic")]
+        public async Task<IActionResult> GetStatistic()
+        {
+            var charityCount = await context.Charities.CountAsync();
+            var projectCount = await context.CharityProjects.CountAsync();
+            var categoriesCount = await context.Charities.Distinct().CountAsync();
+            var response = new
+            {
+                CharityCount = charityCount,
+                ProjectCount = projectCount,
+                CategoriesCount = categoriesCount,
+                HelpedCount = 117,
+                VisitsWeekly = new [] {2, 4, 3, 5, 2, 3, 3}, 
+                HelpedWeekly = new [] {1, 3, 2, 1, 3, 4, 2}
+            };
+
+            return Ok(response);
+        }
         [HttpPost]
         public async Task<IActionResult> PostCharityProject(CharityProjectRequest request)
         {
