@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch(`https://localhost:7158/CharityProjects/statistic`, {
+  fetch(`http://localhost:80/CharityProjects/statistic`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

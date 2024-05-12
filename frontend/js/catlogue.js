@@ -23,7 +23,7 @@ const mockData = [
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    fetch(`https://localhost:7158/CharityProjects/allCategories`, {
+    fetch(`http://localhost:80/CharityProjects/allCategories`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(response => response.json())
       .then(data => updateCategoryFilter(data))
       .catch(error => console.error('Error:', error));
-    fetch('https://localhost:7158/CharityProjects', {
+    fetch('http://localhost:80/CharityProjects', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ document.getElementById('submit-button').addEventListener('click', function() {
       category: category,
     }).toString();
 
-    fetch(`https://localhost:7158/CharityProjects/filter?${queryParams}`, {
+    fetch(`http://localhost:80/CharityProjects/filter?${queryParams}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

@@ -1,7 +1,7 @@
 const id = localStorage.getItem("requestedProjectId");
 
 window.addEventListener("DOMContentLoaded", function() {
-  fetch(`https://localhost:7158/CharityProjects/${id}`, {
+  fetch(`http://localhost:80/CharityProjects/${id}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
