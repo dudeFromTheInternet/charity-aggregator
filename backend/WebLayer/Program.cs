@@ -10,6 +10,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("corsPolicy",
         p =>
         {
+            /*
             p.WithOrigins("http://localhost:63342");
             p.WithOrigins("http://localhost:63343");
             p.WithOrigins("http://localhost:49277");
@@ -19,7 +20,9 @@ builder.Services.AddCors(options =>
             p.WithOrigins("http://localhost:8080");
             p.WithOrigins("http://158.160.82.113:8080");
             p.WithOrigins("http://172.23.0.3:80");
-            p.AllowCredentials();
+            */
+            p.AllowAnyOrigin();
+            //p.AllowCredentials();
             p.AllowAnyHeader();
             p.AllowAnyMethod();
         }
