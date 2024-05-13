@@ -25,7 +25,7 @@ additionButton.addEventListener('click', function () {
     charityName: charityName,
     photo: photo ? URL.createObjectURL(photo) : '../img/icon.png'
   };
-  fetch('http://localhost:80/CharityProjects', {
+  fetch('http://158.160.82.113:80/CharityProjects/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
