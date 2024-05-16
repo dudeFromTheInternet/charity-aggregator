@@ -170,7 +170,7 @@ namespace WebLayer.Controllers
 
             return Ok(response);
         }
-        
+
         [HttpGet("filter")]
         public async Task<IActionResult> GetFilteredCharityProjects([FromQuery] CharityProjectRequest filter)
         {
@@ -194,10 +194,12 @@ namespace WebLayer.Controllers
 
             if (filter.EndDate != null)
                 query = query.Where(p => p.EndDate <= filter.EndDate);
-            if (filter.Category != null)
+            if (filter.Category?.First() != null)
             {
-                filter.Category = filter.Category?.ToArray()[0].Split(',');
+                // split the string by commas
+                filter.Category = filter.Category.First().Split(',');
             }
+
             if (filter.Category != null && filter.Category.Any(a => !string.IsNullOrWhiteSpace(a)))
             {
                 query = query.Where(p =>
