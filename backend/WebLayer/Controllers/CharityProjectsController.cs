@@ -194,7 +194,7 @@ namespace WebLayer.Controllers
 
             if (filter.EndDate != null)
                 query = query.Where(p => p.EndDate <= filter.EndDate);
-            if (filter.Category != null
+            if (filter.Category != null)
             {
                 filter.Category = filter.Category?.ToArray()[0].Split(',');
             }
