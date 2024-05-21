@@ -1,5 +1,6 @@
 .articles-container{
   display: flex;
+  list-style: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;

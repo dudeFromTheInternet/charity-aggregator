@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>Д.А.Б.Р.О. - Добавить статью</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/addition.css">
+  <link rel="stylesheet" href="../css/articleAddition.css">
+  <script defer src="../js/app.js"></script>
+  <script defer src="../js/articleAddition.js"></script>
 </head>
 <body>
+<img class="wave" src="../img/background-elem.png">
+<img class="wave-right" src="../img/background-elem.png">
 <header class="header-main">
   <div class="logo-container">
     <a href="index.html" class = "logo">
@@ -49,6 +56,21 @@
     </ul>
   </nav>
 </header>
-
+<div class="addition-content">
+  <form class="addition-form">
+    <h1>Добавьте статью</h1>
+    <main class="addition-main-info">
+      <input id="addition-name" class="addition-input" placeholder="Название статьи" maxlength="30">
+      <input name="category" id="addition-category" class="addition-input" placeholder="Категории статьи">
+    </main>
+    <aside class="addition-photo">
+      <img id="preview" src="#" class="preview" alt="Логотип или фото статьи">
+      <input accept="image/*" type='file' id="addition-image">
+    </aside>
+    <textarea id="addition-text" placeholder="Текст статьи..."></textarea>
+    <input type="button" id="submit-addition" value="Добавить">
+    <span id="addition-completion"></span>
+  </form>
+</div>
 </body>
 </html>
