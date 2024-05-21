@@ -91,7 +91,7 @@
         cursor: pointer;
       }
       .filter-button:hover{
-        background-color: darkgray;
+        background-color: lightgray;
       }
   }
 }
