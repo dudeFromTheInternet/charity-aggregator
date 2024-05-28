@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="../css/catalogue.css">
   <link rel="stylesheet" href="../css/articlesList.css">
   <link rel="icon" href="../img/logo.png" sizes="any">
+  <script defer src="../js/app.js"></script>
+  <script defer src="../js/articlesList.js"></script>
 </head>
 <body>
 <header class="header-main">
@@ -64,18 +66,11 @@
     <label>
       <input class="filter-input" id="charity-filter" name="charity-name" placeholder="Название организатора">
     </label>
-    <label>
-      <input class="filter-input" id="category-filter" name="category" placeholder="Категория">
-    </label>
-    <label>
-      дата старта компании
+    <label class="date-label">
+      дата публикации
       <input class="filter-date" id="start-date" type="date" name="name">
     </label>
-    <label>
-      дата конца компании
-      <input class="filter-date" id="end-date" type="date" name="name">
-    </label>
-    <input class="filter-button" id="submit-button" type="submit" value="Поиск">
+    <input class="filter-button button" id="submit-button" type="button" value="Поиск">
   </form>
   <ul class="articles-container">
     <li><a class="article" href="article.html">
@@ -103,7 +98,10 @@
   </ul>
 
 </div>
-<script src="../js/catlogue.js"></script>
+
+<footer class="footer-hidden">
+  footer
+</footer>
 <footer>
   footer
 </footer>
