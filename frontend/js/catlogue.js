@@ -1,27 +1,3 @@
-const mockData = [
-    {
-        name: "Проект 1",
-        category: "Категория 1",
-        description: "Описание проекта 1",
-        charityName: "Организация 1",
-        photoUrl: "../img/project1.png",
-        projectUrl: "project1.html",
-        startDate: "2024-03-01",
-        endDate: "2024-06-01",
-    },
-    {
-        name: "Проект 2",
-        category: "Категория 2",
-        description: "Описание проекта 2",
-        charityName: "Организация 2",
-        photoUrl: "../img/project2.png",
-        projectUrl: "project2.html",
-        startDate: "01.03.2024",
-        endDate: "01.04.2024",
-    }
-];
-
-
 document.addEventListener('DOMContentLoaded', function() {
     fetch(`http://158.160.82.113:80/CharityProjects/allCategories/`, {
       method: 'GET',
@@ -169,19 +145,6 @@ function updateProjectsDisplay(projects, clear) {
         projectsContainer.appendChild(li);
     });
 }
-document.addEventListener('DOMContentLoaded', function() {
-  const menu = document.querySelector('.sidemenu');
-  const toggleButton = document.querySelector('.sidemenu-button');
 
-
-  toggleButton.onclick = function() {
-    menu.classList.toggle('active');
-    if(toggleButton.classList.toggle('active')){
-      toggleButton.value = '<';
-    } else {
-      toggleButton.value = '>';
-    }
-  };
-});
 
 

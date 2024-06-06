@@ -36,3 +36,10 @@ footer{
   position: absolute;
   bottom:0;
 }
+span{
+  font-size: 0.9vw;
+  text-align: center;
+}
+.filter-date{
+  width: 33%;
+}

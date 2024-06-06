@@ -179,7 +179,7 @@ footer{
     border: none;
     border-radius: 50px;
     position: fixed;
-    left: -3vh;
+    left: -2vh;
     top: 48vh;
     height: 7vh;
     width: 7vh;
@@ -216,5 +216,4 @@ footer{
     }
   }
 }
-
 
