@@ -6,11 +6,11 @@
   align-items: flex-start;
   width: 80vw;
   .article{
-    margin-left: 10vw;
+    margin-left: 5vw;
     margin-bottom: 3vh;
     display: flex;
-    width: 40vw;
-    height: 40vh;
+    width: 55vw;
+    height: 55vh;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -26,6 +26,7 @@
     }
     .article-list-summary{
       width: 100%;
+      overflow: hidden;
       display: flex;
       flex-wrap: wrap;
       text-align: justify;
@@ -37,9 +38,23 @@ footer{
   bottom:0;
 }
 span{
-  font-size: 0.9vw;
+  font-size: 12px;
   text-align: center;
 }
 .filter-date{
   width: 33%;
+}
+@media only screen and (max-width: 800px) {
+  .articles-container{
+    align-items: center;
+    .article {
+      margin: 0 0 5vh 0;
+      width: 80vw;
+      height: 60vh;
+      .article-list-summary{
+        width: 80vw;
+        overflow: hidden;
+      }
+    }
+  }
 }

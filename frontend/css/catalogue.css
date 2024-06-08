@@ -65,6 +65,16 @@
         width: 90%;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
       }
+      .filter-date:focus{
+        outline: none;
+        border: lightskyblue solid 1px;
+        box-shadow: 0 2px 2px hsla(25, 57%, 88%, 0.7);
+      }
+      .filter-input:focus{
+        outline: none;
+        border: lightskyblue solid 1px;
+        box-shadow: 0 2px 2px hsla(25, 57%, 88%, 0.7);
+      }
       .date-label{
         display: flex;
         flex-direction: column;
@@ -196,13 +206,17 @@ footer{
     left: 0;
   }
   .project{
-      width: 70%;
+      width: 50%;
       justify-content: flex-start;
       padding: 0;
       margin-left: 10px;
+    margin-right: 10px;
       gap: 0;
   }
   .projects-container{
+    display: block;
+    overflow: unset;
+    height: auto;
     .project-info{
       width: 50%;
       gap: 2%;
@@ -214,6 +228,9 @@ footer{
     .project-photo{
       height: 70%;
     }
+  }
+  footer{
+    visibility: hidden;
   }
 }
 

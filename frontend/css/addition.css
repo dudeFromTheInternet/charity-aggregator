@@ -61,6 +61,16 @@
                 font-size: 100%;
               box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
             }
+          .addition-input:focus{
+            outline: none;
+            border: lightskyblue solid 1px;
+            box-shadow: 0 4px 4px hsla(209, 89%, 77%, 0.7);
+          }
+          .addition-date:focus{
+            outline: none;
+            border: lightskyblue solid 1px;
+            box-shadow: 0 4px 4px hsla(209, 89%, 77%, 0.7);
+          }
         }
         .addition-photo{
             display: flex;
@@ -132,6 +142,12 @@
     grid-column: 1 / -1;
     width: 50%;
     justify-self: center;
+}
+
+#addition-text:focus{
+  outline: none;
+  border: lightskyblue solid 1px;
+  box-shadow: 0 4px 4px hsla(209, 89%, 77%, 0.7);
 }
 @media only screen and (max-width: 800px) {
   .addition-form {
