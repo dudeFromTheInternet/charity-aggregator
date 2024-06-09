@@ -13,6 +13,7 @@ public class CharityAggregatorContext : DbContext
     public DbSet<ProjectCategoryMapping> ProjectsCategoryMappings { get; set; }
     public DbSet<ProjectComment> ProjectComments { get; set; }
     public DbSet<ProjectPhoto> ProjectPhotos { get; set; }
+    public DbSet<Article> Articles { get; set; }
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -50,6 +51,9 @@ public class CharityAggregatorContext : DbContext
             .HasOne(pc => pc.ProjectCategory)
             .WithMany(c => c.ProjectCategoryMappings)
             .HasForeignKey(pc => pc.CategoryId);
+        
+        modelBuilder.Entity<Article>()
+            .HasIndex(a => a.Name).IsUnique();
     }
     
     public CharityAggregatorContext(DbContextOptions<CharityAggregatorContext> options)
