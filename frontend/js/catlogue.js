@@ -62,7 +62,7 @@ document.getElementById('submit-button').addEventListener('click', function() {
       category: category,
     }).toString();
 
-    fetch(`http://158.160.82.113:80/CharityProjects/filter?${queryParams}`, {
+    fetch(`http://localhost:80/CharityProjects/filter?${queryParams}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

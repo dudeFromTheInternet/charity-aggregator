@@ -22,9 +22,10 @@
         .addition-main-info{
             display: flex;
             flex-direction: column;
+            gap: 5%;
             justify-content: flex-start;
-            gap: 10%;
             height: auto;
+            margin-bottom: 3vh;
             .date-con{
                 display: flex;
                 flex-direction: row;
@@ -115,9 +116,10 @@
 }
 .addition-form {
     display: grid;
+    min-height: 120vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    gap: 20px;
+    grid-template-rows: auto 2fr auto;
+    gap: 3vh;
 }
 
 .addition-form > h1 {

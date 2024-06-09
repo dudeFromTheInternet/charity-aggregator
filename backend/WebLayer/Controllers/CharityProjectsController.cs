@@ -91,9 +91,12 @@ namespace WebLayer.Controllers
                 Description = request.Description!,
                 StartDate = request.StartDate ?? DateTime.MinValue,
                 EndDate = request.EndDate ?? DateTime.MaxValue,
-                Charity = charity
+                Charity = charity,
+                Reference = request.Reference,
+                CreditNumber = request.CreditNumber,
+                PhoneNumber = request.PhoneNumber
             };
-
+            
             context.CharityProjects.Add(project);
 
             foreach (var categoryName in request.Category!)
@@ -125,7 +128,7 @@ namespace WebLayer.Controllers
             });
 
             await context.SaveChangesAsync();
-
+            
             var response = new CharityProjectRequest
             {
                 ID = project.ProjectId,
@@ -165,7 +168,10 @@ namespace WebLayer.Controllers
                 CharityName = project.Charity.Name,
                 Photo = project.ProjectPhotos.FirstOrDefault()?.PhotoBytes,
                 StartDate = project.StartDate,
-                EndDate = project.EndDate
+                EndDate = project.EndDate,
+                Reference = project.Reference,
+                PhoneNumber = project.PhoneNumber,
+                CreditNumber = project.CreditNumber
             };
 
             return Ok(response);

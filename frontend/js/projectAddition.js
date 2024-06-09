@@ -15,7 +15,9 @@ additionButton.addEventListener('click', function () {
     .map(category => category.trim());
   const charityName = 'Example Charity';
   const photo = document.getElementById('addition-image').files[0];
-
+  const phone_number = document.getElementById('addition-phone').value;
+  const credit_number = document.getElementById('addition-credit').value;
+  const ref = document.getElementById('addition-ref').value;
   const formData = {
     name: name,
     description: description,
@@ -23,9 +25,12 @@ additionButton.addEventListener('click', function () {
     endDate: endDate,
     category: categories,
     charityName: charityName,
-    photo: photo ? URL.createObjectURL(photo) : '../img/icon.png'
+    photo: photo ? URL.createObjectURL(photo) : '../img/icon.png',
+    reference: ref,
+    phoneNumber: phone_number,
+    creditNumber: credit_number,
   };
-  fetch('http://158.160.82.113:80/CharityProjects/', {
+  fetch('http://localhost:80/CharityProjects/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
