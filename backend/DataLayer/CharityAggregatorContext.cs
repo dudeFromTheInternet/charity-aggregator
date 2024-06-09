@@ -51,9 +51,9 @@ public class CharityAggregatorContext : DbContext
             .HasOne(pc => pc.ProjectCategory)
             .WithMany(c => c.ProjectCategoryMappings)
             .HasForeignKey(pc => pc.CategoryId);
-        
+
         modelBuilder.Entity<Article>()
-            .HasIndex(a => a.Name).IsUnique();
+            .HasIndex(a => a.ArticleId).IsUnique();
     }
     
     public CharityAggregatorContext(DbContextOptions<CharityAggregatorContext> options)
