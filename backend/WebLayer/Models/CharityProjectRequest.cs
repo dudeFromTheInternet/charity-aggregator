@@ -16,6 +16,8 @@ public class CharityProjectRequest
     public string? CharityName { get; set; }
 
     public string? Photo { get; set; }
+    public string? PhoneNumber { get; set; }
+    public string? Reference { get; set; }
+    public string? CreditNumber { get; set; }
 
-    public CharityProjectRequest() {}
 }

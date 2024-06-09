@@ -30,7 +30,7 @@
   <nav class="navbar">
     <ul class="authmenu">
       <li><a href="login.html" class="auth logIn button">Войти</a></li>
-      <li><a href="register.html" class="auth">Регистрация</a></li>
+      <li><a href="register.html" class="auth reg-a">Регистрация</a></li>
     </ul>
   </nav>
 </header>
@@ -52,7 +52,7 @@
   <nav class="navbar">
     <ul class="authmenu">
       <li><a href="login.html" class="auth logIn button">Войти</a></li>
-      <li><a href="register.html" class="auth">Регистрация</a></li>
+      <li><a href="register.html" class="auth reg-a">Регистрация</a></li>
     </ul>
   </nav>
 </header>
@@ -60,14 +60,17 @@
     <form class="addition-form">
         <h1>Добавьте свой проект</h1>
         <main class="addition-main-info">
-                <input id="addition-name" class="addition-input" placeholder="Название проекта" maxlength="30">
+                <input id="addition-name" class="addition-input" placeholder="Название проекта" maxlength="40">
             <div class="date-container">
                 <span>Дата действия проекта:</span>
                 <span class="date-con">
                     С <input id="addition-start-date" type="date" class="addition-date"> По <input id="addition-end-date" type="date" class="addition-date">
                 </span>
             </div>
-                <input name="category" id="addition-category" class="addition-input" placeholder="Категория проекта">
+                <input name="category" id="addition-category" class="addition-input" placeholder="Категория проекта" maxlength="50">
+            <input name="phone" id="addition-phone" type="tel" class="addition-input" placeholder="Контактный телефон">
+          <input name="credit-number" id="addition-credit" class="addition-input" placeholder="Банковские реквизиты">
+          <input name="reference" id="addition-ref" class="addition-input" placeholder="Ссылка на сайт проекта">
         </main>
         <aside class="addition-photo">
             <img id="preview" src="#" class="preview" alt="Логотип или фото проекта">

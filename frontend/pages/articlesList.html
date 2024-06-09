@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="../css/catalogue.css">
   <link rel="stylesheet" href="../css/articlesList.css">
   <link rel="icon" href="../img/logo.png" sizes="any">
+  <script defer src="../js/app.js"></script>
+  <script defer src="../js/sidemenu.js"></script>
+  <script defer src="../js/articlesList.js"></script>
 </head>
 <body>
 <header class="header-main">
@@ -27,7 +30,7 @@
   <nav class="navbar">
     <ul class="authmenu">
       <li><a href="login.html" class="auth logIn button">Войти</a></li>
-      <li><a href="register.html" class="auth">Регистрация</a></li>
+      <li><a href="register.html" class="auth reg-a">Регистрация</a></li>
     </ul>
   </nav>
 </header>
@@ -49,12 +52,12 @@
   <nav class="navbar">
     <ul class="authmenu">
       <li><a href="login.html" class="auth logIn button">Войти</a></li>
-      <li><a href="register.html" class="auth">Регистрация</a></li>
+      <li><a href="register.html" class="auth reg-a">Регистрация</a></li>
     </ul>
   </nav>
 </header>
 <img class="wave-right" src="../img/background-elem.png">
-
+<input type="button" class="sidemenu-button" value=">">
 <div class="cat-main">
   <form class="sidemenu">
     <h4>Поиск по фильтрам</h4>
@@ -64,22 +67,15 @@
     <label>
       <input class="filter-input" id="charity-filter" name="charity-name" placeholder="Название организатора">
     </label>
-    <label>
-      <input class="filter-input" id="category-filter" name="category" placeholder="Категория">
+    <label class="date-label">
+      дата публикации
+      <span>С<input class="filter-date" id="start-date" type="date" name="name"> По<input class="filter-date" id="end-date" type="date" name="name"></span>
     </label>
-    <label>
-      дата старта компании
-      <input class="filter-date" id="start-date" type="date" name="name">
-    </label>
-    <label>
-      дата конца компании
-      <input class="filter-date" id="end-date" type="date" name="name">
-    </label>
-    <input class="filter-button" id="submit-button" type="submit" value="Поиск">
+    <input class="filter-button button" id="submit-button" type="button" value="Поиск">
   </form>
-  <div class="articles-container">
-    <a class="article">
-      <img src="../img/background.png" alt="фото статьи">
+  <ul class="articles-container">
+    <li><a class="article" href="article.html">
+      <img src="../img/icon.png" alt="фото статьи">
       <h2 class="article-list-title">
         Название статьи
       </h2>
@@ -88,9 +84,9 @@
         йфвйцвйвйцвйцвцвdqqwd dqwdqwdqwdqwd
         вцйфцйфвфвфв wdq dqwdwqdqwdqw dqwd qwdqqwdqwdqwdqwdqwdqwdqw
       </pre>
-    </a>
-    <a class="article">
-      <img src="../img/background.png" alt="фото статьи">
+    </a></li>
+    <li><a class="article">
+      <img src="../img/icon.png" alt="фото статьи">
       <h2 class="article-list-title">
         Название статьи
       </h2>
@@ -99,22 +95,14 @@
         йфвйцвйвйцвйцвцвdqqwd dqwdqwdqwdqwd
         вцйфцйфвфвфв wdq dqwdwqdqwdqw dqwd qwdqqwdqwdqwdqwdqwdqwdqw
       </pre>
-    </a>
-    <a class="article">
-      <img src="../img/background.png" alt="фото статьи">
-      <h2 class="article-list-title">
-        Название статьи
-      </h2>
-      <pre class="article-list-summary">
-        Краткое описание статьи чсфывввфвв dwdqwdwqdqwd
-        йфвйцвйвйцвйцвцвdqqwd dqwdqwdqwdqwd
-        вцйфцйфвфвфв wdq dqwdwqdqwdqw dqwd qwdqqwdqwdqwdqwdqwdqwdqw
-      </pre>
-    </a>
-  </div>
+    </a></li>
+  </ul>
 
 </div>
-<script src="../js/catlogue.js"></script>
+
+<footer class="footer-hidden">
+  footer
+</footer>
 <footer>
   footer
 </footer>

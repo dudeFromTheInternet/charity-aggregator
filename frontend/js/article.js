@@ -1,7 +1,7 @@
-const id = localStorage.getItem("requestedProjectId");
+const id = localStorage.getItem("requestedArticleId");
 
 window.addEventListener("DOMContentLoaded", function() {
-  fetch(`http://localhost:80/CharityProjects/${id}/`, {
+  fetch(`http://158.160.82.113:80/CharityProjects/${id}/`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -32,17 +32,8 @@ function displayProjectData(data) {
 
   const projectImage = document.querySelector('.project-flex-hor img');
   projectImage.alt = `Logo of ${data.name}`;
-  let contactsString = "";
-  if (data.phoneNumber){
-    contactsString += `Тел.: <a href="tel:${data.phoneNumber}">${data.phoneNumber}</a><br>`;
-  }
-  if (data.reference){
-    contactsString += `<a href="${data.reference}">Сайт</a><br>`;
-  }if (data.creditNumber){
-    contactsString += `Реквизиты: ${data.creditNumber}`;
-  }
-  console.log(data);
-  document.querySelector('.project-contacts').innerHTML = contactsString;
+
+  document.querySelector('.project-contacts').textContent = data.contactInfo;
 }
 const modal = document.getElementById('contactModal');
 const openButton = document.querySelector('.openModal');

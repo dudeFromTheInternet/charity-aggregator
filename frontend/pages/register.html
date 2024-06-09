@@ -29,7 +29,7 @@
   <nav class="navbar">
     <ul class="authmenu">
       <li><a href="login.html" class="auth logIn button">Войти</a></li>
-      <li><a href="register.html" class="auth">Регистрация</a></li>
+      <li><a href="register.html" class="auth reg-a">Регистрация</a></li>
     </ul>
   </nav>
 </header>
@@ -51,7 +51,7 @@
   <nav class="navbar">
     <ul class="authmenu">
       <li><a href="login.html" class="auth logIn button">Войти</a></li>
-      <li><a href="register.html" class="auth">Регистрация</a></li>
+      <li><a href="register.html" class="auth reg-a">Регистрация</a></li>
     </ul>
   </nav>
 </header>
@@ -59,14 +59,14 @@
   <form class="signUp">
     <h1>Зарегистрироваться</h1>
     <input placeholder="Придумайте Логин" class="auth-input" required>
-    <input placeholder="email" class="auth-input" required>
-    <input placeholder="Придумайте пароль" class="auth-input" required>
-    <input placeholder="Повторите пароль" class="auth-input" required>
-    <input placeholder="Название вашей организации" class="auth-input">
+    <input placeholder="email" type="email" class="auth-input" required>
+    <input placeholder="Придумайте пароль" class="auth-input" type="password" required>
+    <input placeholder="Повторите пароль" class="auth-input" type="password" required>
+    <input placeholder="Название вашей организации" class="auth-input" required maxlength="50">
     <input placeholder="Направление" class="auth-input">
     <button class="auth-button button">Зарегистрироватся</button>
   </form>
-  <h5>Есть аккаунт?<a href="login.html">Войдите</a></h5>
+  <h5>Есть аккаунт?  <a href="login.html" class="reg-a">Войдите</a></h5>
 </div>
 <footer class="footer-hidden">
 

@@ -10,8 +10,12 @@ public class Article
     public int ArticleId { get; set; }
 
     [Required]
-    [StringLength(100)]
-    public string Name { get; set; }
+    [StringLength(40)]
+    public string Tittle { get; set; }
     
-    public string? Text { get; set; }
+    public Charity Author { get; set; }
+    
+    public string Text { get; set; }
+    
+    public ArticlePhoto? Photo { get; set; }
 }

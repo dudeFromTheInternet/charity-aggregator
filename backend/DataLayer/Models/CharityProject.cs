@@ -14,6 +14,9 @@ public class CharityProject
     public string Name { get; set; }
 
     public string Description { get; set; }
+    public string? PhoneNumber { get; set; }
+    public string? Reference { get; set; }
+    public string? CreditNumber { get; set; }
 
     [Required]
     public DateTime StartDate { get; set; }

@@ -163,6 +163,12 @@ html {
   border: lightskyblue solid 1px;
   box-shadow: 0 4px 4px hsla(209, 89%, 77%, 0.7);
 }
+.reg-a{
+  text-decoration: none;
+}
+.reg-a:hover{
+  text-decoration: underline;
+}
 .auth-button{
   font-size: 1vw;
   margin-top: 10px;

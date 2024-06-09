@@ -22,9 +22,10 @@
         .addition-main-info{
             display: flex;
             flex-direction: column;
+            gap: 5%;
             justify-content: flex-start;
-            gap: 10%;
             height: auto;
+            margin-bottom: 3vh;
             .date-con{
                 display: flex;
                 flex-direction: row;
@@ -61,6 +62,16 @@
                 font-size: 100%;
               box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
             }
+          .addition-input:focus{
+            outline: none;
+            border: lightskyblue solid 1px;
+            box-shadow: 0 4px 4px hsla(209, 89%, 77%, 0.7);
+          }
+          .addition-date:focus{
+            outline: none;
+            border: lightskyblue solid 1px;
+            box-shadow: 0 4px 4px hsla(209, 89%, 77%, 0.7);
+          }
         }
         .addition-photo{
             display: flex;
@@ -105,9 +116,10 @@
 }
 .addition-form {
     display: grid;
+    min-height: 120vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    gap: 20px;
+    grid-template-rows: auto 2fr auto;
+    gap: 3vh;
 }
 
 .addition-form > h1 {
@@ -132,6 +144,12 @@
     grid-column: 1 / -1;
     width: 50%;
     justify-self: center;
+}
+
+#addition-text:focus{
+  outline: none;
+  border: lightskyblue solid 1px;
+  box-shadow: 0 4px 4px hsla(209, 89%, 77%, 0.7);
 }
 @media only screen and (max-width: 800px) {
   .addition-form {
