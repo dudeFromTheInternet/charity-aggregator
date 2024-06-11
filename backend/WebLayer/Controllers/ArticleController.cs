@@ -13,8 +13,21 @@ public class ArticleController(CharityAggregatorContext context) : Controller
     [HttpGet]
     public async Task<IActionResult> GetArticles()
     {
-        var articles = await context.Articles.ToListAsync();
-        return Ok(articles);
+        var articles = await context.Articles
+            .Include(article => article.Photo)
+            .Include(article => article.Author)
+            .ToListAsync();
+        var response = articles.Select(p => new ArticleRequest
+        {
+            ArticleId = p.ArticleId,
+            Title = p.Title,
+            PublicationDate = p.PublicationDate,
+            Photo = p.Photo?.PhotoBytes,
+            Author = p.Author.Name,
+            Text = p.Text,
+        });
+
+        return Ok(response);
     }
     
     [HttpGet("{id}")]
@@ -81,7 +94,8 @@ public class ArticleController(CharityAggregatorContext context) : Controller
         public async Task<IActionResult> GetFilteredArticles([FromQuery] ArticleRequest filter)
         {
             IQueryable<Article> query = context.Articles
-                .Include(p => p.Photo).Include(article => article.Author);
+                .Include(p => p.Photo)
+                .Include(article => article.Author);
 
             if (!string.IsNullOrWhiteSpace(filter.Title))
                 query = query.Where(p => p.Title.ToLower().Contains(filter.Title.ToLower()));
@@ -98,6 +112,7 @@ public class ArticleController(CharityAggregatorContext context) : Controller
 
             var response = articles.Select(p => new ArticleRequest
             {
+                ArticleId = p.ArticleId,
                 Title = p.Title,
                 PublicationDate = p.PublicationDate,
                 Photo = p.Photo?.PhotoBytes,

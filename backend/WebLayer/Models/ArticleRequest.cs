@@ -2,7 +2,8 @@ namespace WebLayer.Models;
 
 public class ArticleRequest
 {
-    public string Title { get; set; }
+    public int? ArticleId { get; set; }
+    public string? Title { get; set; }
     
     public string? Author { get; set; }
     

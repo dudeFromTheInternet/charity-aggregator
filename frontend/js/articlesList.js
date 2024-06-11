@@ -49,7 +49,7 @@ function updateArticlesDisplay(articles, clear) {
     projectLink.id = article.id;
     projectLink.href = 'article.html';
     projectLink.addEventListener('click', (e) => {
-      localStorage.setItem('requestedArticleId', article.id);
+      localStorage.setItem('requestedArticleId', article.articleId);
     })
 
     const title = document.createElement('h2');
@@ -72,6 +72,8 @@ function updateArticlesDisplay(articles, clear) {
     projectLink.appendChild(projectPhoto);
     projectLink.appendChild(title);
     projectLink.appendChild(projectDescription);
+    projectLink.appendChild(charityName);
+    projectLink.appendChild(projectTime);
     li.appendChild(projectLink)
     articlesContainer.appendChild(li);
   });
