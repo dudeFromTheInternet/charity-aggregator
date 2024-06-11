@@ -59,7 +59,7 @@ function updateArticlesDisplay(articles, clear) {
     const charityName = document.createElement('h5');
     charityName.textContent = article.author;
     const projectTime = document.createElement('h5');
-    projectTime.textContent = article.publicationDate.toLocaleDateString();
+    projectTime.textContent = new Date(article.publicationDate).toLocaleDateString();
 
     const projectDescription = document.createElement('pre');
     projectDescription.className = 'article-list-summary';

@@ -42,7 +42,7 @@ public class ArticleController(CharityAggregatorContext context) : Controller
 
         var article = new Article
         {
-            Tittle = request.Tittle,
+            Title = request.Title,
             Author = charity,
             PublicationDate = request.PublicationDate.Value.ToUniversalTime(),
             Text = request.Text,
@@ -83,21 +83,22 @@ public class ArticleController(CharityAggregatorContext context) : Controller
             IQueryable<Article> query = context.Articles
                 .Include(p => p.Photo).Include(article => article.Author);
 
-            if (!string.IsNullOrWhiteSpace(filter.Tittle))
-                query = query.Where(p => p.Tittle.ToLower().Contains(filter.Tittle.ToLower()));
+            if (!string.IsNullOrWhiteSpace(filter.Title))
+                query = query.Where(p => p.Title.ToLower().Contains(filter.Title.ToLower()));
             
             if (!string.IsNullOrWhiteSpace(filter.Author))
                 query = query.Where(p => p.Author.Name.ToLower().Contains(filter.Author.ToLower()));
 
-
-            query = query.Where(p => p.PublicationDate >= filter.StartFilterDate);
-            query = query.Where(p => p.PublicationDate <= filter.EndFilterDate);
+            if(filter.StartFilterDate != null)
+                query = query.Where(p => p.PublicationDate >= filter.StartFilterDate);
+            if(filter.EndFilterDate != null)
+                query = query.Where(p => p.PublicationDate <= filter.EndFilterDate);
             
             var articles = await query.ToListAsync();
 
             var response = articles.Select(p => new ArticleRequest
             {
-                Tittle = p.Tittle,
+                Title = p.Title,
                 PublicationDate = p.PublicationDate,
                 Photo = p.Photo?.PhotoBytes,
                 Author = p.Author.Name,

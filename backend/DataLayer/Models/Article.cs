@@ -11,7 +11,7 @@ public class Article
 
     [Required]
     [StringLength(40)]
-    public string Tittle { get; set; }
+    public string Title { get; set; }
     
     public Charity Author { get; set; }
     
