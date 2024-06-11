@@ -2,6 +2,7 @@ using DataLayer;
 using DataLayer.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using WebLayer.Models;
 
 namespace WebLayer.Controllers;
 
@@ -24,9 +25,35 @@ public class ArticleController(CharityAggregatorContext context) : Controller
     }
     
     [HttpPost]
-    public async Task<IActionResult> AddArticle(Article article)
+    public async Task<IActionResult> AddArticle(ArticleRequest request)
     {
-        await context.Articles.AddAsync(article);
+        var charity = await context.Charities
+            .FirstOrDefaultAsync(c => c.Name == request.Author);
+
+        if (charity == null)
+        {
+            charity = new Charity
+            {
+                Name = request.Author!
+            };
+
+            context.Charities.Add(charity);
+        }
+
+        var article = new Article
+        {
+            Tittle = request.Tittle,
+            Author = charity,
+            PublicationDate = request.PublicationDate.Value.ToUniversalTime(),
+            Text = request.Text,
+        };
+        context.Articles.Add(article);
+        context.ArticlePhotos.Add(new ArticlePhoto
+        {
+            Article = article,
+            PhotoBytes = request.Photo!
+        });
+
         await context.SaveChangesAsync();
         return Ok();
     }
@@ -50,5 +77,33 @@ public class ArticleController(CharityAggregatorContext context) : Controller
         }
         return Ok();
     }
-    
+    [HttpGet("filter")]
+        public async Task<IActionResult> GetFilteredArticles([FromQuery] ArticleRequest filter)
+        {
+            IQueryable<Article> query = context.Articles
+                .Include(p => p.Photo).Include(article => article.Author);
+
+            if (!string.IsNullOrWhiteSpace(filter.Tittle))
+                query = query.Where(p => p.Tittle.ToLower().Contains(filter.Tittle.ToLower()));
+            
+            if (!string.IsNullOrWhiteSpace(filter.Author))
+                query = query.Where(p => p.Author.Name.ToLower().Contains(filter.Author.ToLower()));
+
+
+            query = query.Where(p => p.PublicationDate >= filter.StartFilterDate);
+            query = query.Where(p => p.PublicationDate <= filter.EndFilterDate);
+            
+            var articles = await query.ToListAsync();
+
+            var response = articles.Select(p => new ArticleRequest
+            {
+                Tittle = p.Tittle,
+                PublicationDate = p.PublicationDate,
+                Photo = p.Photo?.PhotoBytes,
+                Author = p.Author.Name,
+                Text = p.Text,
+            });
+
+            return Ok(response);
+        }
 }

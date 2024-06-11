@@ -15,6 +15,8 @@ public class Article
     
     public Charity Author { get; set; }
     
+    public DateTime PublicationDate { get; set; }
+    
     public string Text { get; set; }
     
     public ArticlePhoto? Photo { get; set; }
