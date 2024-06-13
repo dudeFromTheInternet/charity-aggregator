@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="../css/login.css">
   <link rel="icon" href="../img/logo.png" sizes="any">
   <script src="../js/app.js"></script>
+  <script defer src="../js/login.js"></script>
   <title>Д.А.Б.Р.О. - Регистрация</title>
 </head>
 <body>
@@ -21,9 +22,7 @@
     <ul class="navmenu">
       <li><a href="catalogue.html" class="menu button">Каталог</a></li>
       <li><a href="statistic.html" class="menu button">Статистика</a></li>
-      <li><a href="projectAddition.html" class="menu button">Добавить проект</a></li>
       <li><a href="articlesList.html" class="menu button">Статьи</a></li>
-      <li><a href="articleAddition.html" class="menu button">Добавить статью</a></li>
     </ul>
   </nav>
   <nav class="navbar">
@@ -43,9 +42,7 @@
     <ul class="navmenu">
       <li><a href="catalogue.html" class="menu button">Каталог</a></li>
       <li><a href="statistic.html" class="menu button">Статистика</a></li>
-      <li><a href="projectAddition.html" class="menu button">Добавить проект</a></li>
       <li><a href="articlesList.html" class="menu button">Статьи</a></li>
-      <li><a href="articleAddition.html" class="menu button">Добавить статью</a></li>
     </ul>
   </nav>
   <nav class="navbar">
@@ -59,9 +56,9 @@
 
   <form class="login-form">
     <h1>Войти</h1>
-    <input placeholder="Логин/email" type="email" class="auth-input">
-    <input placeholder="Пароль" type="password" class="auth-input">
-    <button class="auth-button button">Войти</button>
+    <input id="userName" placeholder="Логин/email" type="email" class="auth-input" required>
+    <input id="password" placeholder="Пароль" type="password" class="auth-input" required>
+    <button id="login" class="auth-button button">Войти</button>
   </form>
   <h5>Нет аккаунта?  <a href="register.html" class="reg-a">Зарегистрируйтесь</a></h5>
 </div>
