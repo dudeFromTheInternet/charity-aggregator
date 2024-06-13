@@ -25,10 +25,11 @@
       border: 1px solid var(--secondary-color);
     }
     .article-list-summary{
-      width: 100%;
+      width: 55vw;
       overflow: hidden;
       display: flex;
       flex-wrap: wrap;
+      text-wrap: wrap;
       text-align: justify;
     }
   }
@@ -43,6 +44,10 @@ span{
 }
 .filter-date{
   width: 33%;
+}
+h5{
+  margin: 1%;
+  font-size: 12px;
 }
 @media only screen and (max-width: 800px) {
   .articles-container{

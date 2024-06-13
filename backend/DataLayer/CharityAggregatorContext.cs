@@ -15,6 +15,8 @@ public class CharityAggregatorContext : DbContext
     public DbSet<ProjectPhoto> ProjectPhotos { get; set; }
     public DbSet<Article> Articles { get; set; }
     
+    public DbSet<ArticlePhoto> ArticlePhotos { get; set; }
+    
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Charity>().HasIndex(c => c.Username).IsUnique();
