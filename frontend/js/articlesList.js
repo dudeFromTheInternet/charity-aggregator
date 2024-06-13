@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  fetch('http://localhost:80/Article/', {
+  fetch('http://158.160.82.113:80/Article/', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ document.getElementById('submit-button').addEventListener('click', function() {
     author: charityName,
   }).toString();
 
-  fetch(`http://localhost:80/Article/filter?${queryParams}`, {
+  fetch(`http://158.160.82.113:80/Article/filter?${queryParams}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

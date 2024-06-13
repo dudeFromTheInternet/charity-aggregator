@@ -30,7 +30,7 @@ additionButton.addEventListener('click', function () {
     phoneNumber: phone_number,
     creditNumber: credit_number,
   };
-  fetch('http://localhost:80/CharityProjects/', {
+  fetch('http://158.160.82.113:80/CharityProjects/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

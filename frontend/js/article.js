@@ -1,7 +1,7 @@
 const id = localStorage.getItem("requestedArticleId");
 
 window.addEventListener("DOMContentLoaded", function() {
-  fetch(`http://localhost:80/Article/${id}/`, {
+  fetch(`http://158.160.82.113:80/Article/${id}/`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
